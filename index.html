@@ -1,264 +1,127 @@
 <!DOCTYPE html>
 
-  <!-- hello there lurker, there is nothing to see here ;-;-->
+
+<!-- hello there lurker, there is nothing to see here ;-;-->
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="wherever you go, evevryone's connected.">
-  <title>~/λz's BlackBox</title>
+  <title>~/helyz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/landing.css">
 </head>
 <body>
 
-<div class="overlay" id="overlay" onclick="closeSB()"></div>
+<div class="atm-scan"></div>
+<div class="atm-vignette"></div>
 
-<div class="topbar">
-  <a href="index.html" class="tb-brand"><span class="tilde">~/</span>λ</a>
-  <button class="tb-btn" onclick="toggleSB()">≡ menu</button>
-</div>
+<!-- ./topbar -->
+<header class="topbar">
+  <span class="tb-brand"><span class="tld">~/</span><span class="nm">helyz</span></span>
+  <div class="tb-right">
+    <span class="tb-sys">[ YoRHa Terminal v3.14 ]</span>
+    <span class="tb-status"><span class="sdot"></span>ONLINE</span>
+  </div>
+</header>
 
-<div class="site">
+<!-- ./landing-->
+<main>
 
-  <!-- ./left_sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <a href="index.html" class="sb-brand">
-      <span class="tilde">~/</span><span class="handle">helyz</span>
-    </a>
+  <!-- ././left_portrait -->
+  <div class="portrait-side">
+    <div class="portrait-frame">
+      <div class="c-bl"></div>
+      <div class="c-br"></div>
+      <div class="p-scan-left"></div>
+      <div class="p-scan-right"></div>
+      <div class="portrait-scan"></div>
 
-    <div class="sb-profile">
-      <div class="av-wrap">
-        <div class="av-ring"></div>
-        <div class="av-inner">λ</div>
+      <img
+        src="assets/helyz2026.png"
+        alt="helyz portrait"
+        class="portrait-img"
+        onerror="this.style.display='none';document.querySelector('.portrait-fallback').style.display='flex'"
+      >
+      <div class="portrait-fallback">
+        <span class="fb-lambda">λ</span>
+        <span>portrait not found</span>
+        <span style="color:var(--accent);">assets/portrait.png</span>
       </div>
-      <div class="sb-name">helyz</div>
-      <div class="sb-role">pwnzor :3</div>
-      <div class="sb-bio">Offensive Security<br> Lost in the Cyberspace. </div>
-      <div class="sb-stats">
-        <div class="sstat">
-          <span class="sstat-n" id="stat-posts">—</span>
-          <span class="sstat-l">posts</span>
-        </div>
-        <div class="sstat">
-          <span class="sstat-n">12</span>
-          <span class="sstat-l">CTFs</span>
-        </div>
-        <div class="sstat">
-          <span class="sstat-n" id="stat-tags">—</span>
-          <span class="sstat-l">tags</span>
-        </div>
-      </div>
-      <div class="sb-socials">
-        <a href="https://github.com/he7yz" class="sb-soc" target="_blank" rel="noopener" title="GitHub">gh</a>
-        <a href="https://twitter.com/helyz_"  class="sb-soc" target="_blank" rel="noopener" title="Twitter">tw</a>
-        <a href="#" class="sb-soc" title="RSS">rss</a>
-      </div>
+
+      <div class="portrait-label">USER: HELYZ</div>
     </div>
-    
-    <!-- wip, some webpages doesnt exist -->
-    <nav class="sb-nav">
-      <a href="index.html"      class="nav-link active"><span class="ni">▸</span> Home</a>
-      <a href="categories.html" class="nav-link"><span class="ni">▸</span> Categories</a>
-      <a href="tags.html"       class="nav-link"><span class="ni">▸</span> Tags</a>
-      <a href="archives.html"   class="nav-link"><span class="ni">▸</span> Archives</a>
-      <a href="projects.html"   class="nav-link"><span class="ni">▸</span> Projects</a>
-      <a href="about.html"      class="nav-link"><span class="ni">▸</span> About</a>
-    </nav>
-
-    <div class="sb-term">
-      <div><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></div>
-      <div class="t-out">helyz</div>
-      <div><span class="t-prompt">$</span> <span class="t-cmd">uname -r</span></div>
-      <div class="t-out">7.0.10-arch1-1 </div>
-      <div><span class="t-prompt">$</span> <span class="t-cmd">cat focus.txt</span></div>
-      <div class="t-out">offensive-security</div>
-      <div class="t-out">boot-2-root</div>
-      <div class="t-out">reverse-engineering</div>
-      <div class="t-out">osint</div>
-      <div><span class="t-prompt">$</span> <span class="t-cursor"></span></div>
-    </div>
-  </aside>
-
-  <!-- ./main -->
-  <div class="main-wrap">
-    <main class="main">
-      <div class="main-grid">
-
-        <!-- ./main/posts-column -->
-        <div class="main-content">
-          <div class="sec-hd" id="sec-hd">latest posts</div>
-
-          <!-- ./main/posts-column/active-filter-pill(hidden rn)-->
-          <div id="filter-bar" style="display:none;margin-bottom:1.2rem;display:none;align-items:center;gap:.6rem;">
-            <span style="font-size:.65rem;color:var(--text-lo);">filtered by:</span>
-            <span id="filter-label" style="font-size:.65rem;color:var(--accent);border:1px solid var(--a-border);padding:.1em .5em;border-radius:2px;background:var(--a-bg);"></span>
-            <button onclick="clearFilter()" style="background:none;border:none;color:var(--text-lo);font-size:.65rem;font-family:var(--font);cursor:pointer;transition:color .13s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-lo)'">✕ clear</button>
-          </div>
-
-          <div class="post-list" id="post-list">
-            <!-- ./main/posts-column/skeleton-loader -->
-            <div style="padding:1.3rem 0;border-bottom:1px solid var(--border);">
-              <div class="skeleton sk-line sk-w40" style="margin-bottom:.6rem;"></div>
-              <div class="skeleton sk-line sk-h18 sk-w90" style="margin-bottom:.5rem;"></div>
-              <div class="skeleton sk-line sk-w70"></div>
-            </div>
-
-            <div style="padding:1.3rem 0;border-bottom:1px solid var(--border);">
-              <div class="skeleton sk-line sk-w40" style="margin-bottom:.6rem;"></div>
-              <div class="skeleton sk-line sk-h18 sk-w90" style="margin-bottom:.5rem;"></div>
-              <div class="skeleton sk-line sk-w70"></div>
-            </div>
-
-            <div style="padding:1.3rem 0;">
-              <div class="skeleton sk-line sk-w40" style="margin-bottom:.6rem;"></div>
-              <div class="skeleton sk-line sk-h18 sk-w90" style="margin-bottom:.5rem;"></div>
-              <div class="skeleton sk-line sk-w70"></div>
-            </div>
-
-          </div>
-
-          <div class="pagination" id="pagination"></div>
-        </div>
-
-        <!-- ./main/right-sidebar -->
-        <aside class="right-bar">
-          <div class="rb-section">
-            <div class="rb-title"><span class="rb-dot"></span>Recently Updated</div>
-            <div class="rb-posts" id="rb-recent"></div>
-          </div>
-          <div class="rb-section">
-            <div class="rb-title"><span class="rb-dot"></span>Trending Tags</div>
-            <div class="tag-cloud" id="rb-tags"></div>
-          </div>
-        </aside>
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div>© 2026 <span class="ft-accent">lambda</span>. Certain rights reserved.</div>
-      <div class="ft-links">
-        <a href="https://github.com/he7yz" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://twitter.com/helyz_"  target="_blank" rel="noopener">Twitter</a>
-        <a href="#">RSS</a>
-      </div>
-    </footer>
+    <div class="portrait-sub">Tearing into the cyberspace.</div>
   </div>
 
-<!-- /site -->
+  <!-- ././right_info -->
+  <div class="info-side">
+    <div class="data-lbl">identifier</div>
 
-<script src="js/main.js"></script>
-<script>
-  const PER_PAGE = 8;
-  let allPosts = [], filtered = [], currentPage = 1;
+    <!-- $the_beauty_of_ascii -->
+    <div id="morph-wrap" aria-label="helyz"></div>
 
-  <!-- /site/load -->
-  async function init() {
-    try {
-      const r = await fetch('posts.json');
-      allPosts = await r.json();
-      filtered  = allPosts;
+    <div class="tagline">
+       OffSec<span class="sep">·</span> Embedded Engineering<br>
+      DAW Production <span class="sep">·</span> Game Development
+    </div>
 
-      <!-- /site/load/stats -->
-      document.getElementById('stat-posts').textContent = allPosts.length;
-      const allTags = [...new Set(allPosts.flatMap(p => p.tags))];
-      document.getElementById('stat-tags').textContent = allTags.length;
+    <div class="divider">ACCESS</div>
 
-      renderPosts();
-      renderRecent();
-      renderTagCloud(allTags);
-    } catch(e) {
-      document.getElementById('post-list').innerHTML =
-        `<p style="color:var(--text-lo);font-size:.75rem;padding:1rem 0;">
-          Could not load posts, uwarghhh</code>.<br></code>
-        </p>`;
-    }
-  }
-
-  /* $render_post_cards */
-  function renderPosts() {
-    const start = (currentPage - 1) * PER_PAGE;
-    const page  = filtered.slice(start, start + PER_PAGE);
-
-    document.getElementById('post-list').innerHTML = page.map(p => `
-      <a href="post.html?file=${p.id}" class="post-card">
-        <div class="pc-meta">
-          <span class="pc-date">${p.date}</span>
-          <span class="pc-cat ${p.catClass}">${p.category}</span>
-        </div>
-        <div class="pc-title">${p.title}</div>
-        <div class="pc-excerpt">${p.excerpt}</div>
-        <div class="pc-tags">${p.tags.map(t =>
-          `<span class="ptag" onclick="event.preventDefault();filterTag('${t}')">${t}</span>`
-        ).join('')}</div>
+    <nav class="site-nav">
+      <a href="blog.html" class="nav-item">
+        <span class="ni-br">[</span><span class="ni-num">01</span><span class="ni-br">]</span>
+        <span class="ni-lbl">Blog</span>
+        <span class="ni-trl"></span>
       </a>
-    `).join('') || `<p style="color:var(--text-lo);font-size:.75rem;padding:1rem 0;">No posts found.</p>`;
+      <a href="projects.html" class="nav-item">
+        <span class="ni-br">[</span><span class="ni-num">02</span><span class="ni-br">]</span>
+        <span class="ni-lbl">Projects</span>
+        <span class="ni-trl"></span>
+      </a>
+      
+      <a href="about.html" class="nav-item">
+        <span class="ni-br">[</span><span class="ni-num">03</span><span class="ni-br">]</span>
+        <span class="ni-lbl">About</span>
+        <span class="ni-trl"></span>
+      </a>
+      <a href="https://github.com/he7yz" class="nav-item" target="_blank" rel="noopener">
+        <span class="ni-br">[</span><span class="ni-num">04</span><span class="ni-br">]</span>
+        <span class="ni-lbl">GitHub</span>
+        <span class="ni-trl"></span>
+      </a>
+    </nav>
 
-    renderPagination();
-  }
+    <div class="cursor-line">
+      <span class="cl-prompt">$</span>
+      <span class="cl-cursor"></span>
+    </div>
+  </div>
 
-  /* $pagination */
-  function renderPagination() {
-    const total = Math.ceil(filtered.length / PER_PAGE);
-    const el = document.getElementById('pagination');
-    if (total <= 1) { el.innerHTML = ''; return; }
+</main>
 
-    let h = currentPage > 1
-      ? `<a class="pg-btn" onclick="goPage(${currentPage-1})">←</a>` : '';
-    for (let i = 1; i <= total; i++)
-      h += `<a class="pg-btn ${i===currentPage?'cur':''}" onclick="goPage(${i})">${i}</a>`;
-    if (currentPage < total)
-      h += `<a class="pg-btn" onclick="goPage(${currentPage+1})">→</a>`;
-    el.innerHTML = h;
-  }
+<!-- ./footer -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>OFFENSIVE SECURITY</span><span class="msep">◆</span>
+    <span>EMBEDDED ENGINEERING</span><span class="msep">◆</span>
+    <span>DAW PRODUCTION</span><span class="msep">◆</span>
+    <span>CTF PLAYER</span><span class="msep">◆</span>
+    <span>SHELLCODE</span><span class="msep">◆</span>
+    <span>ARCH LINUX FEMBOY(real)</span><span class="msep">◆</span>
+    <span>:3</span><span class="msep">◆</span>
+    <span>OFFENSIVE SECURITY</span><span class="msep">◆</span>
+    <span>EMBEDDED ENGINEERING</span><span class="msep">◆</span>
+    <span>DAW PRODUCTION</span><span class="msep">◆</span>
+    <span>CTF PLAYER</span><span class="msep">◆</span>
+    <span>SHELLCODE</span><span class="msep">◆</span>
+    <span>ARCH LINUX FEMBOY(real)</span><span class="msep">◆</span>
+    <span>:3</span><span class="msep">◆</span>
+  </div>
+</div>
 
-  function goPage(n) {
-    currentPage = n;
-    renderPosts();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  /* $filters */
-  function filterTag(tag) {
-    filtered = allPosts.filter(p => p.tags.includes(tag));
-    currentPage = 1;
-    document.getElementById('sec-hd').textContent = `#${tag}`;
-    const fb = document.getElementById('filter-bar');
-    document.getElementById('filter-label').textContent = tag;
-    fb.style.display = 'flex';
-    renderPosts();
-  }
-
-  function clearFilter() {
-    filtered = allPosts;
-    currentPage = 1;
-    document.getElementById('sec-hd').textContent = 'latest posts';
-    document.getElementById('filter-bar').style.display = 'none';
-    renderPosts();
-  }
-
-  /* $right_bar */
-  function renderRecent() {
-    document.getElementById('rb-recent').innerHTML =
-      allPosts.slice(0, 5).map(p => `
-        <a href="post.html?file=${p.id}" class="rb-post">
-          <div class="rb-post-t">${p.title}</div>
-          <div class="rb-post-d">${p.date}</div>
-        </a>
-      `).join('');
-  }
-
-  function renderTagCloud(tags) {
-    document.getElementById('rb-tags').innerHTML = tags.map(t =>
-      `<span class="tcloud" onclick="filterTag('${t}')">${t}</span>`
-    ).join('');
-  }
-
-  init();
-
-</script>
+<script src="js/landing.js" defer></script>
 </body>
 </html>
