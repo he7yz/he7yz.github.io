@@ -166,7 +166,7 @@ body {
 /* avatar_with_spinny_ring */
 .av-wrap {
   position:relative;
-  width:66px; height:66px;
+  width:166px; height:166px;
   flex-shrink:0;
 }
 .av-ring {
@@ -189,6 +189,12 @@ body {
   display:flex; align-items:center; justify-content:center;
   font-size:1.45rem; font-weight:800;
   color:var(--accent); z-index:1;
+  overflow:hidden;
+}
+.av-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
 }
 
 .sb-name   { font-size:.9rem; font-weight:700; color:var(--text-hi); letter-spacing:.04em; }
