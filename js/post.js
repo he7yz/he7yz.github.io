@@ -1,8 +1,3 @@
-/* =============================================
-   ~/λ — post.js
-   Handles fetching and rendering markdown writeups
-   ============================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
   /* Configure marked */
   marked.setOptions({ gfm: true, breaks: false });
