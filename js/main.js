@@ -1,8 +1,4 @@
-/* =============================================
-   ~/λ — main.js
-   ============================================= */
-
-/* -- Sidebar (mobile) -- */
+/* mobile_sidebar_support */
 function toggleSB() {
   document.getElementById('sidebar').classList.toggle('open');
   document.getElementById('overlay').classList.toggle('show');
@@ -13,7 +9,7 @@ function closeSB() {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSB(); });
 
-/* -- Copy code button -- */
+/* codeblocks_copy_btn */
 function copyCode(btn) {
   const wrap = btn.closest('.code-wrap');
   const code = wrap.querySelector('pre code') || wrap.querySelector('pre');
@@ -24,7 +20,7 @@ function copyCode(btn) {
   });
 }
 
-/* -- Active nav link -- */
+/* nav_link */
 (function setActiveNav() {
   const page = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(a => {
@@ -35,7 +31,6 @@ function copyCode(btn) {
   });
 })();
 
-/* -- Wrap code blocks with header + copy btn (used in post.html) -- */
 function wrapCodeBlocks(articleEl) {
   articleEl.querySelectorAll('pre').forEach(pre => {
     if (pre.closest('.code-wrap')) return;
@@ -57,7 +52,7 @@ function wrapCodeBlocks(articleEl) {
   });
 }
 
-/* -- Build TOC from article headings + scroll-spy -- */
+/*toc_builder*/
 function buildTOC(articleEl, tocListEl) {
   const headings = articleEl.querySelectorAll('h2, h3');
   tocListEl.innerHTML = '';
@@ -76,7 +71,6 @@ function buildTOC(articleEl, tocListEl) {
     tocListEl.appendChild(li);
   });
 
-  /* Scroll-spy */
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -90,7 +84,7 @@ function buildTOC(articleEl, tocListEl) {
   headings.forEach(h => observer.observe(h));
 }
 
-/* -- Convert "> FLAG: ..." blockquotes into styled flag boxes -- */
+/* -- stylized_flag_boxes(use ">" markdown inside .md writeups, itll create a highlighted box) */
 function convertFlagBlocks(articleEl) {
   articleEl.querySelectorAll('blockquote').forEach(bq => {
     const raw = bq.textContent.trim();
