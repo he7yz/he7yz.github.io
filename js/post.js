@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* Configure marked */
-  marked.setOptions({ gfm: true, breaks: false });
+  /* route_to_assets/screenshots/ */
+  marked.use({
+    renderer: {
+      image(href, title, text) {
+        let imgSrc = href;
+        if (!href.startsWith('http') && !href.startsWith('assets/')) {
+          imgSrc = `assets/screenshots/${href}`;
+        }
+        return `<img src="${imgSrc}" alt="${text || ''}" class="md-img" />`;
+      }
+    }
+  });
+
   loadPost();
 });
 
@@ -9,11 +20,11 @@ async function loadPost() {
   const id = params.get('file');
   if (!id) { showErr('No writeup specified. <a href="blog.html">← Back to blog</a>'); return; }
 
-  /* Update sidebar terminal */
+  /* update_sidebar_terminal */
   document.getElementById('term-fn').textContent = `writeups/${id}.md`;
 
   try {
-    /* Parallel fetch: metadata + markdown */
+    /* parallel_fetch:meta_&_markdown */
     const [postsRes, mdRes] = await Promise.all([
       fetch('posts.json'),
       fetch(`writeups/${id}.md`)
@@ -25,25 +36,25 @@ async function loadPost() {
     const mdText = await mdRes.text();
     const meta   = posts.find(p => p.id === id) || null;
 
-    /* Populate header */
+    /* populate_header */
     if (meta) populateHeader(meta, posts);
     else {
       document.getElementById('post-title').textContent = id;
       document.getElementById('bc-title').textContent   = id;
     }
 
-    /* Render markdown */
+    /* render_markdown */
     const article = document.getElementById('article');
     article.innerHTML = marked.parse(mdText);
 
-    /* Post-process rendered HTML (functions from main.js) */
+    /* post_process_rendered_html_(func_by_main.js) */
     if (typeof convertFlagBlocks === 'function') convertFlagBlocks(article);
     if (typeof wrapCodeBlocks === 'function') wrapCodeBlocks(article);
     if (typeof buildTOC === 'function') buildTOC(article, document.getElementById('toc-list'));
     
     article.querySelectorAll('pre code:not(.hljs)').forEach(b => hljs.highlightElement(b));
 
-    /* Update sidebar stats from posts.json */
+    /* update_sidebar_stats */
     const allTags = [...new Set(posts.flatMap(p => p.tags))];
     const statPosts = document.getElementById('stat-posts');
     const statTags = document.getElementById('stat-tags');
@@ -70,7 +81,7 @@ function populateHeader(meta, allPosts) {
   document.getElementById('post-tags').innerHTML = meta.tags
     .map(t => `<span class="ptag">${t}</span>`).join('');
 
-  /* Challenge box */
+  /* chall box */
   if (meta.challenge) {
     const ch = meta.challenge;
     document.getElementById('chal-box').style.display = '';
@@ -99,7 +110,7 @@ function populateHeader(meta, allPosts) {
     `).join('');
   }
 
-  /* Prev / Next */
+  /* prev_/_next */
   const idx = allPosts.findIndex(p => p.id === meta.id);
   let nav = '';
   if (idx > 0) {
