@@ -1,0 +1,48 @@
+[
+  {
+    "id": "OWASPKL_CTF{Boot2Root} Team Project Sekai Writeup",
+    "title": "OWASPKL Liga CTF {Boot2Root} Writeup",
+    "date": "2026-06-01",
+    "category": "CTF Writeup",
+    "catClass": "c-ctf",
+    "tags": ["CTF", "Got Root?", "Linux", "Shellcode"],
+    "excerpt": "My writeups for the OWASPKL LIGA CTF Boot2Root Challenges",
+    "challenge": {
+      "name": "GGEZAF, Spray And Pray Series, Routine Series, Chains Of Attacks Series, The Art Of Evasion And Persistence",
+      "difficulty": "Easy, Easy, Medium, Hard, Very Hard",
+      "points": "null",
+      "solves": 9,
+      "tools": "quite alot, will update later"
+    }
+  },
+
+  // placeholder testing
+  {
+    "id": "post-test", // this id is for the name of the .md file it will grab from writeups/ dir.
+    "title": "title-test", // post title
+    "date": "2025-03-10",
+    "category": "0x00", // can add whatever, 
+    "catClass": "c-malware",// refer to the comment below
+    "tags": ["miku","meiko","kaito","ia","luka","rin","len","gumi","teto"], // will be counted accordingly
+    "excerpt": "we are vocaloids!",
+    "challenge": {
+      "name": "Mikudayo",
+      "difficulty": "Impossible",
+      "points": 300,
+      "solves": 12,
+      "tools": "Yamaha · FL Studio"
+    }
+  }
+]
+
+// HACK: for catClass, there is multiple tags:
+// c-ctf                    - orange
+// c-forensics (DFir)       - white
+// c-re (revEng)            - purple
+// c-crypto                 - pink 
+// c-web                    - blue
+// c-pwn                    - red
+// c-malware                - yellow
+// c-misc                   - lime
+// stc to add more in the future...
+
