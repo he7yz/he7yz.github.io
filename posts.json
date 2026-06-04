@@ -15,15 +15,13 @@
       "tools": "quite alot, will update later"
     }
   },
-
-  // placeholder testing
   {
-    "id": "post-test", // this id is for the name of the .md file it will grab from writeups/ dir.
-    "title": "title-test", // post title
+    "id": "post-test",
+    "title": "title-test",
     "date": "2025-03-10",
-    "category": "0x00", // can add whatever, 
-    "catClass": "c-malware",// refer to the comment below
-    "tags": ["miku","meiko","kaito","ia","luka","rin","len","gumi","teto"], // will be counted accordingly
+    "category": "0x00",
+    "catClass": "c-malware",
+    "tags": ["miku","meiko","kaito","ia","luka","rin","len","gumi","teto"],
     "excerpt": "we are vocaloids!",
     "challenge": {
       "name": "Mikudayo",
@@ -34,15 +32,3 @@
     }
   }
 ]
-
-// HACK: for catClass, there is multiple tags:
-// c-ctf                    - orange
-// c-forensics (DFir)       - white
-// c-re (revEng)            - purple
-// c-crypto                 - pink 
-// c-web                    - blue
-// c-pwn                    - red
-// c-malware                - yellow
-// c-misc                   - lime
-// stc to add more in the future...
-
