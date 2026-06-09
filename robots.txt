@@ -1,0 +1,84 @@
+# Block General AI Crawlers & Scrapers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: CohereAI
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: DiffBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Twitterbot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: magpie-crawler
+Disallow: /
+
+User-agent: AwarioBot
+Disallow: /
+
+# Block Common Unrestricted Scrapers
+User-agent: CCBot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Opt-out Specific AI Training Programs
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
