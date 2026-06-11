@@ -20,6 +20,8 @@ Alternative IP: 139.180.145.146
 5.  :P
    ![Pasted image 20260601172931](Pasted%20image%2020260601172931.png)
 
+>> 🚩 Flag: OWASPKL{H3re's_th3_G1v3aW4y_500_p0int5_f0r_yA}
+
 ## [EASY] Spray And Pray Series
 
 ### Spray And Pray (i)
@@ -63,6 +65,8 @@ IP: 192.168.122.195
 2. We get the creds, `abel:angel1`. Logged in ssh, and found the flag in `local1.txt`
 
 ![Pasted image 20260601173938](Pasted%20image%2020260601173938.png)
+
+>> 🚩 Flag: OWASPKL{a2377c9ddd1837b32c82f4774a53e7a3}
 
 ### Spray And Pray Series (ii)
 
@@ -183,6 +187,8 @@ For user `niki`, I used `abel_0411@weekndbuk1tj4lil` as the password, it worked.
 
 ![598](Pasted%20image%2020260601175159.png)
 
+>> 🚩 Flag: OWASPKL{d73aa3d24c1fb6ce993a38efe5505369}
+
 ### Spray And Pray Series (iii)
 
 Get root.
@@ -200,6 +206,8 @@ It seems that we can create a new sudo user with this.
 3. Root access achieved, Flag found :3
 
 ![Pasted image 20260601180320](Pasted%20image%2020260601180320.png)
+
+>> 🚩 Flag: OWASPKL{05400e69198b6036bc1c05302435648e}
 
 ## [Medium] Routine Series
 
@@ -250,6 +258,8 @@ Checked port `3000`. Grafana Login webpage.
 
 Got the flag!
 
+>> 🚩 Flag: OWASPKL{496d5373e7501c9aab3b2658bbad4c02}
+
 ### Routine Series (ii)
 
 Get root.
@@ -274,6 +284,8 @@ Get root.
 5. Wait for the cron job then *voila*, Flag spotted Owo
 
 ![Pasted image 20260601182653](Pasted%20image%2020260601182653.png)
+
+>> 🚩 Flag: OWASPKL{b0f8c51049b9db31552bda1bd751940a}
 
 ## [Hard] Chains Of Attacks Series
 
@@ -669,6 +681,8 @@ I'm now in the post-privilege escalation phase (post-privesc).
 
 ![Pasted image 20260601213045](Pasted%20image%2020260601213045.png)
 
+>> 🚩 Flag: OWASPKL{47f1adc2c50c9a61292b05eb444c07eb}
+
 ### Chain Of Attacks Series (ii)
 
 Get root.
@@ -696,6 +710,8 @@ now i can read :>
 5. Navigated to Tools > Terminal and went ahead for root :3
 
 ![Pasted image 20260601220658](Pasted%20image%2020260601220658.png)
+
+>> 🚩 Flag: OWASPKL{68e8511198425c0cbbb3f0d182314afd}
 
 ## [Very Hard] The Art Of Evasion & Persistence
 
@@ -760,6 +776,8 @@ Port `8080` shows XAMPP page.
 
 8. Snooped into webadmin via. SMB and somehow found the flag sitting there lol![Pasted image 20260601223110](Pasted%20image%2020260601223110.png)
 
+>> 🚩 Flag: OWASPKL{b955142d1496bc8d6f0d5b16f014666}
+
 ## Extra Pics
 
 ![Pasted image 20260604033112](Pasted%20image%2020260604033112.png)
@@ -775,5 +793,7 @@ I stayed up all night until the brink of dawn just to solve these questions, som
 I sleep when people are awake. I wake up when people are asleep.
 
 I can't lie, that solving these questions feels even better than getting an A+, or even winning a sweaty ass competitive match.
+
+It's just the beginning.
 
 This is exhilarating.
