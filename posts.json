@@ -12,7 +12,7 @@
       "difficulty": "Easy, Easy, Medium, Hard, Very Hard",
       "points": "null",
       "solves": 9,
-      "tools": "quite alot, will update later"
+      "tools": "QEMU KVM / nmap / ftp / hydra / ssh / curl / sqlite3 / netcat / Python pty / stty / impacket-secretsdump / hashcat / SMB (netexec/smbclient)"
     }
   },
   {
