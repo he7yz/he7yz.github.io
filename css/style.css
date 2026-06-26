@@ -28,8 +28,8 @@
   --c-misc:     #a3e635;
   --c-malware:  #fbbf24;
 
-  --sb-w:  258px;
-  --rb-w:  210px;
+  --sb-w:  18.5rem;
+  --rb-w:  15rem;
   --font:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
   --font-pixel: 'Silkscreen', cursive;
   --r:     4px;
@@ -92,7 +92,7 @@ body {
 .site {
   display: flex;
   min-height: 100vh;
-  max-width: 1400px;
+  max-width: 100rem;
   margin: 0 auto;
   border-left:  1px solid var(--border);
   border-right: 1px solid var(--border);
@@ -473,7 +473,7 @@ body {
 /* post_page_article_content */
 .article {
   padding:1.5rem 2rem 2rem;
-  max-width:800px;
+  max-width:1150px;
 }
 
 .article h2 {
