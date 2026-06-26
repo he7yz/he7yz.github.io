@@ -1,5 +1,21 @@
 [
   {
+    "id": "OWASPKL_CTF{WebExploitation} Writeup",
+    "title": "OWASPKL Liga CTF {WebExploitation} Writeup",
+    "date": "2026-06-15",
+    "category": "CTF Writeup",
+    "catClass": "c-ctf",
+    "tags": ["CTF", "OWASP Top 10", "Linux", "Cloudflare", "Directory Traversal", "Cookie Tampering", "Local File Inclusion Exploit (LFI)", "XML External Entity Injection (XXE)", "KONAMI Cheatcode"],
+    "excerpt": "My writeups for the OWASPKL LIGA CTF Web Exploitation Challenges",
+    "challenge": {
+      "name": "Keluar (Exit), Novita, Nate, Laufey, goat2, imej-anda (your-image), thegoat, The Amazing Digital Advanture",
+      "difficulty": "Very Easy, Easy, Normal, Normal, Normal, Hard, Hard, Riddle",
+      "points": "6747",
+      "solves": 8,
+      "tools": "curl / Python / XML / Cloudflare Worker"
+    }
+  },
+  {
     "id": "OWASPKL_CTF{Boot2Root} Team Project Sekai Writeup",
     "title": "OWASPKL Liga CTF {Boot2Root} Writeup",
     "date": "2026-06-01",
@@ -20,7 +36,7 @@
     "title": "title-test",
     "date": "2025-03-10",
     "category": "0x00",
-    "catClass": "c-malware",
+    "catClass": "c-misc",
     "tags": ["miku","meiko","kaito","ia","luka","rin","len","gumi","teto"],
     "excerpt": "we are vocaloids!",
     "challenge": {
