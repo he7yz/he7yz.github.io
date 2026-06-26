@@ -26,7 +26,7 @@
     "challenge": {
       "name": "GGEZAF, Spray And Pray Series, Routine Series, Chains Of Attacks Series, The Art Of Evasion And Persistence",
       "difficulty": "Easy, Easy, Medium, Hard, Very Hard",
-      "points": "null",
+      "points": "4829",
       "solves": 9,
       "tools": "QEMU KVM / nmap / ftp / hydra / ssh / curl / sqlite3 / netcat / Python pty / stty / impacket-secretsdump / hashcat / SMB (netexec/smbclient)"
     }
