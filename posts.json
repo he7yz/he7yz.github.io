@@ -6,7 +6,7 @@
     "category": "CTF Writeup",
     "catClass": "c-ctf",
     "tags": ["CTF", "OWASP Top 10", "Linux", "Cloudflare", "Directory Traversal", "Cookie Tampering", "Local File Inclusion Exploit (LFI)", "XML External Entity Injection (XXE)", "KONAMI Cheatcode"],
-    "excerpt": "My writeups for the OWASPKL LIGA CTF Web Exploitation Challenges",
+    "excerpt": "My writeups for the OWASPKL LIGA CTF Web Exploitation Category Challenges",
     "challenge": {
       "name": "Keluar (Exit), Novita, Nate, Laufey, goat2, imej-anda (your-image), thegoat, The Amazing Digital Advanture",
       "difficulty": "Very Easy, Easy, Normal, Normal, Normal, Hard, Hard, Riddle",
@@ -21,8 +21,8 @@
     "date": "2026-06-01",
     "category": "CTF Writeup",
     "catClass": "c-ctf",
-    "tags": ["CTF", "Got Root?", "Linux", "Shellcode"],
-    "excerpt": "My writeups for the OWASPKL LIGA CTF Boot2Root Challenges",
+    "tags": ["CTF", "Got Root?", "Linux", "Shellcode", "Grafana", "CVE"],
+    "excerpt": "My writeups for the OWASPKL LIGA CTF Boot2Root Category Challenges",
     "challenge": {
       "name": "GGEZAF, Spray And Pray Series, Routine Series, Chains Of Attacks Series, The Art Of Evasion And Persistence",
       "difficulty": "Easy, Easy, Medium, Hard, Very Hard",
