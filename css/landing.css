@@ -15,6 +15,7 @@
   --a-bg:      rgba(200,184,144,.06);
   --a-border:  rgba(200,184,144,.20);
   --font:      'JetBrains Mono', 'Fira Code', monospace;
+  --font-pixel: 'Silkscreen', cursive;
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -196,6 +197,7 @@ main {
 
 /* tagline */
 .tagline {
+  font-family: var(--font-pixel);
   font-size:.72rem; color:var(--text-lo);
   letter-spacing:.06em; line-height:1.85;
 }
