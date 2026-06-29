@@ -1,4 +1,5 @@
 /* the beauty of ascii*/
+
 class ASCIIMorph {
   constructor(el, text) {
     this.c    = el;
@@ -30,7 +31,7 @@ class ASCIIMorph {
     cvs.height = H * DPR;
     ctx.scale(DPR, DPR);
 
-    const fs = Math.min(W / this.text.length * 1.2, 106);
+    const fs = Math.min(W / this.text.length * 1.2, 136);
     ctx.font          = `800 ${fs}px "JetBrains Mono", monospace`;
     ctx.textBaseline  = 'middle';
     ctx.fillStyle     = '#fff';

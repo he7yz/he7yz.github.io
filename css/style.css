@@ -462,7 +462,8 @@ body {
   padding:.52rem .9rem;
   background:var(--surface2);
   border-bottom:1px solid var(--border2);
-  font-size:.58rem; font-weight:700;
+  font-family: var(--font-mc);
+  font-size:.67rem; font-weight:700;
   color:var(--text-lo); letter-spacing:.12em; text-transform:uppercase;
 }
 .chal-box-hdr .sq { color:var(--accent); }
