@@ -210,7 +210,7 @@ body {
   object-fit:cover;
 }
 
-.sb-name   { font-size:.9rem; font-weight:700; color:var(--text-hi); letter-spacing:.04em; }
+.sb-name   { font-family: var(--font-mc); font-size:1.5rem; font-weight: normal; color:var(--text-hi); letter-spacing:0; }
 .sb-role   { font-size:.58rem; color:var(--accent); letter-spacing:.17em; text-transform:uppercase; }
 .sb-bio    { font-size:.66rem; color:var(--text-lo); text-align:center; line-height:1.65; }
 
@@ -238,8 +238,9 @@ body {
 .nav-link {
   display:flex; align-items:center; gap:.52rem;
   padding: .42rem 1.25rem;
-  font-size: .72rem; font-weight:500;
-  letter-spacing: .07em; text-transform:uppercase;
+  font-family: var(--font-mc), 'Monocraft', monospace;
+  font-size: .72rem; font-weight:normal;
+  letter-spacing: 0; text-transform:none;
   color:var(--text-lo);
   transition:all .13s;
 }
@@ -317,7 +318,8 @@ body {
 }
 
 .pc-title {
-  font-size:.88rem; font-weight:600;
+  font-family: var(--font-mc), 'Monocraft', monospace !important;
+  font-size:.88rem; font-weight: normal;
   color:var(--text-hi); line-height:1.4;
   margin-bottom:.36rem;
   transition:color .18s;
@@ -843,7 +845,7 @@ body {
 
   .sidebar {
     position:fixed; 
-    left: calc (-1 * var(--sb-w));
+    left: -320px;
     height:100vh; width:var(--sb-w); z-index:180; top:0;
     transition:left .28s cubic-bezier(.4,0,.2,1);
     background:var(--bg);
