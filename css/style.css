@@ -830,7 +830,8 @@ body {
   .site   { border:none; }
 
   .sidebar {
-    position:fixed; left:-280px;
+    position:fixed; 
+    left: calc (-1 * var(--sb-w));
     height:100vh; width:var(--sb-w); z-index:180; top:0;
     transition:left .28s cubic-bezier(.4,0,.2,1);
     background:var(--bg);
