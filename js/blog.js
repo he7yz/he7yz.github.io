@@ -1,75 +1,180 @@
-document.addEventListener("DOMContentLoaded", initBlog);
 
-async function initBlog() {
+const PER_PAGE = 8;
+let allPosts = [], filtered = [], currentPage = 1;
+
+/* helpers */
+function esc(s) {
+  return String(s ?? '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+/* fetch + boot */
+async function init() {
   try {
-    // fetch_posts_data
-    const res = await fetch('posts.json');
-    if (!res.ok) throw new Error("Failed to fetch posts");
-    const posts = await res.json();
+    allPosts = await fetch('posts.json').then(r => r.json());
+    filtered = allPosts;
 
-    // upd_sidebar_stats
-    const statPosts = document.getElementById('stat-posts');
-    if (statPosts) statPosts.textContent = posts.length;
+    const el = id => document.getElementById(id);
+    if (el('stat-posts')) el('stat-posts').textContent = allPosts.length;
 
-    // get_all_unique_tags
-    const allTags = [...new Set(posts.flatMap(p => p.tags))];
-    const statTags = document.getElementById('stat-tags');
-    if (statTags) statTags.textContent = allTags.length;
+    const uniqTags = [...new Set(allPosts.flatMap(p => p.tags))];
+    if (el('stat-tags')) el('stat-tags').textContent = uniqTags.length;
 
-    // main_post_renderer
-    renderPostList(posts);
-
-    // right_sidebar_renderer
-    renderRightSidebar(posts, allTags);
-
-  } catch (error) {
-    console.error("Error loading blog posts:", error);
-    document.getElementById('post-list').innerHTML = 
-      `<p style="color:var(--text-lo);font-size:.75rem;">Failed to load posts. Check console.</p>`;
+    renderPosts();
+    renderRecent();
+    renderTagCloud(uniqTags);
+  } catch (e) {
+    const list = document.getElementById('post-list');
+    if (list) list.innerHTML = `
+      <p style="color:var(--text-lo);font-size:.74rem;padding:1.5rem 0;line-height:1.9;">
+        Could not load posts.<br>
+      </p>`;
   }
 }
 
-function renderPostList(posts) {
-  const listContainer = document.getElementById('post-list');
-  
-  if (!posts || posts.length === 0) {
-    listContainer.innerHTML = `<p style="color:var(--text-lo);font-size:.75rem;">No posts found.</p>`;
-    return;
-  }
+/* ---- render post cards ---- */
+function renderPosts() {
+  const start = (currentPage - 1) * PER_PAGE;
+  const page  = filtered.slice(start, start + PER_PAGE);
+  const list  = document.getElementById('post-list');
+  if (!list) return;
 
-  // replace_skeleton_with_real_posts
-  listContainer.innerHTML = posts.map(p => `
-    <a href="post.html?file=${p.id}" class="post-card">
-      <div class="pc-meta">
-        <span class="pc-date">${p.date}</span>
-        <span class="pc-cat ${p.catClass || ''}">${p.category}</span>
-      </div>
-      <div class="pc-title">${p.title}</div>
-      <div class="pc-excerpt">${p.excerpt || ''}</div>
-      <div class="pc-tags">
-        ${p.tags.map(t => `<span class="ptag">${t}</span>`).join('')}
-      </div>
-    </a>
-  `).join('');
+  list.innerHTML = page.map(p => {
+    const thumbHtml = p.thumbnail
+      ? `<div class="pc-thumb">
+           <img src="${esc(p.thumbnail)}" alt="${esc(p.title)}" loading="lazy">
+         </div>`
+      : '';
+
+    return `
+      <a href="post.html?file=${encodeURIComponent(p.id)}" class="post-card">
+        ${thumbHtml}
+        <div class="pc-body">
+          <div class="pc-meta">
+            <span class="pc-date">${esc(p.date)}</span>
+            <span class="pc-cat ${esc(p.catClass)}">${esc(p.category)}</span>
+          </div>
+          <div class="pc-title">${esc(p.title)}</div>
+          <div class="pc-excerpt">${esc(p.excerpt)}</div>
+          <div class="pc-tags">
+            ${p.tags.map(t =>
+              `<span class="ptag" data-tag="${esc(t)}">${esc(t)}</span>`
+            ).join('')}
+          </div>
+        </div>
+      </a>`;
+  }).join('') || `<p style="color:var(--text-lo);font-size:.74rem;padding:1rem 0;">No posts found.</p>`;
+
+  /* title glitch + tag click */
+  list.querySelectorAll('.pc-title').forEach(attachGlitch);
+  list.querySelectorAll('.ptag[data-tag]').forEach(el =>
+    el.addEventListener('click', e => { e.preventDefault(); filterByTag(el.dataset.tag); })
+  );
+
+  renderPagination();
 }
 
-function renderRightSidebar(posts, tags) {
-  // left_recently_updated_sidebar
-  const recentContainer = document.getElementById('rb-recent');
-  if (recentContainer) {
-    recentContainer.innerHTML = posts.slice(0, 3).map(p => `
-      <a href="post.html?file=${p.id}" class="rb-post">
-        <div class="rb-post-t">${p.title}</div>
-        <div class="rb-post-d">${p.date}</div>
-      </a>
-    `).join('');
-  }
+/* title_gl1tch_ascii_anim */
+const GLITCH_POOL = '░▒▓│─╋+=-_.~*#:!?/\\^<>⠿⠾⠻⠷⠯⠟⣿λΛ';
 
-  // left_trending_tags_sidebar
-  const tagsContainer = document.getElementById('rb-tags');
-  if (tagsContainer) {
-    tagsContainer.innerHTML = tags.map(t => `
-      <span class="tcloud">${t}</span>
-    `).join('');
-  }
+function attachGlitch(el) {
+  const original = el.textContent;
+  let tid = null;
+
+  el.addEventListener('mouseenter', () => {
+    if (tid) return;
+    let step = 0;
+    const STEPS = 11;
+
+    tid = setInterval(() => {
+      step++;
+      const resolved = Math.floor((step / STEPS) * original.length);
+      el.textContent = [...original].map((c, i) => {
+        if (c === ' ' || c === '\u2014' || c === '·') return c;
+        if (i < resolved) return c;
+        return GLITCH_POOL[~~(Math.random() * GLITCH_POOL.length)];
+      }).join('');
+
+      if (step >= STEPS) {
+        clearInterval(tid);
+        tid = null;
+        el.textContent = original;
+      }
+    }, 46);
+  });
+
+  el.addEventListener('mouseleave', () => {
+    if (tid) { clearInterval(tid); tid = null; }
+    el.textContent = original;
+  });
 }
+
+/* pagination */
+function renderPagination() {
+  const total = Math.ceil(filtered.length / PER_PAGE);
+  const el    = document.getElementById('pagination');
+  if (!el) return;
+  if (total <= 1) { el.innerHTML = ''; return; }
+
+  let h = currentPage > 1
+    ? `<a class="pg-btn" onclick="goPage(${currentPage - 1})">←</a>` : '';
+  for (let i = 1; i <= total; i++)
+    h += `<a class="pg-btn ${i === currentPage ? 'cur' : ''}" onclick="goPage(${i})">${i}</a>`;
+  if (currentPage < total)
+    h += `<a class="pg-btn" onclick="goPage(${currentPage + 1})">→</a>`;
+  el.innerHTML = h;
+}
+
+function goPage(n) {
+  currentPage = n;
+  renderPosts();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* filters */
+function filterByTag(tag) {
+  filtered = allPosts.filter(p => p.tags.includes(tag));
+  currentPage = 1;
+  const hd = document.getElementById('sec-hd');
+  if (hd) hd.textContent = `#${tag}`;
+  const fb = document.getElementById('filter-bar');
+  const fl = document.getElementById('filter-label');
+  if (fb) fb.style.display = 'flex';
+  if (fl) fl.textContent  = tag;
+  renderPosts();
+}
+
+function clearFilter() {
+  filtered = allPosts;
+  currentPage = 1;
+  const hd = document.getElementById('sec-hd');
+  if (hd) hd.textContent = 'latest posts';
+  const fb = document.getElementById('filter-bar');
+  if (fb) fb.style.display = 'none';
+  renderPosts();
+}
+
+/* right bar */
+function renderRecent() {
+  const el = document.getElementById('rb-recent');
+  if (!el) return;
+  el.innerHTML = allPosts.slice(0, 5).map(p => `
+    <a href="post.html?file=${encodeURIComponent(p.id)}" class="rb-post">
+      <div class="rb-post-t">${esc(p.title)}</div>
+      <div class="rb-post-d">${esc(p.date)}</div>
+    </a>`).join('');
+}
+
+function renderTagCloud(tags) {
+  const el = document.getElementById('rb-tags');
+  if (!el) return;
+  el.innerHTML = tags.map(t =>
+    `<span class="tcloud" onclick="filterByTag('${esc(t)}')">${esc(t)}</span>`
+  ).join('');
+}
+
+/* boot */
+document.readyState === 'loading'
+  ? document.addEventListener('DOMContentLoaded', init)
+  : init();

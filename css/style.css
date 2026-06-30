@@ -233,6 +233,11 @@ body {
 }
 .sb-soc:hover { color:var(--accent); border-color:var(--a-border); background:var(--a-bg); }
 
+.sb-soc svg {
+  width:12px; height:12px;
+  fill:currentColor; flex-shrink:0; display:block;
+}
+
 /* nav */
 .sb-nav      { padding:.55rem 0; border-bottom:1px solid var(--border); flex-shrink:0; }
 .nav-link {
@@ -287,7 +292,9 @@ body {
 .post-list   { display:flex; flex-direction:column; }
 
 .post-card {
-  display:block;
+  display:flex;
+  align-items:flex-start;
+  gap:.85rem;
   padding: 1.3rem 0;
   border-bottom: 1px solid var(--border);
   position:relative;
@@ -305,6 +312,38 @@ body {
 }
 .post-card:hover::before    { background:var(--accent); }
 .post-card:hover .pc-title  { color:var(--accent); }
+
+/* thumbnail_with_flexibility */
+.pc-thumb {
+  width: 170px;
+  aspect-ratio: 16 / 9;
+  flex-shrink: 0;
+  border-radius: var(--r);
+  overflow: hidden;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  align-self: center;
+  position: relative;
+}
+.pc-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(.78) saturate(.65);
+  transition: filter .22s;
+  display: block;
+}
+.post-card:hover .pc-thumb img { filter: brightness(1) saturate(1); }
+ 
+/* body_(content_to_the_RIGHT_of_the_thumbnail) */
+.pc-body {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column; gap: .32rem;
+}
+
 
 .pc-meta  { display:flex; align-items:center; gap:.68rem; margin-bottom:.36rem; }
 .pc-date  { font-size:.63rem; color:var(--text-lo); }
@@ -339,6 +378,7 @@ body {
   font-size:.59rem; color:var(--text-lo);
   padding:.08em .44em;
   border:1px solid var(--border2);
+  animation:shimmer 1.4s infinite;
   border-radius:2px; cursor:pointer;
   transition:all .13s;
 }
@@ -463,7 +503,7 @@ body {
   background:var(--surface2);
   border-bottom:1px solid var(--border2);
   font-family: var(--font-mc);
-  font-size:.67rem; font-weight:700;
+  font-size:.58rem; font-weight:700;
   color:var(--text-lo); letter-spacing:.12em; text-transform:uppercase;
 }
 .chal-box-hdr .sq { color:var(--accent); }
@@ -877,3 +917,10 @@ body {
   .projects-grid   { grid-template-columns:1fr; }
   .footer          { flex-direction:column; gap:.5rem; text-align:center; }
 }
+
+/* thumbnail_stacking */
+@media (max-width: 540px) {
+  .post-card { flex-direction: column; gap: .6rem; }
+  .pc-thumb  { width: 100%; aspect-ratio: 16 / 9; }
+}
+
