@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<link rel="icon" type="image/png" href="assets/pfps/helyz2026.png">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects by helyz.">
+  <title>Projects — ~/λz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="overlay" id="overlay" onclick="closeSB()"></div>
+<div class="topbar">
+  <a href="index.html" class="tb-brand"><span class="tilde">~/</span>λ</a>
+  <button class="tb-btn" onclick="toggleSB()">≡ menu</button>
+</div>
+<div class="site">
+  <aside class="sidebar" id="sidebar">
+    <a href="index.html" class="sb-brand"><span class="tilde">~/</span><span class="handle">helyz</span></a>
+    <div class="sb-profile">
+      <div class="av-wrap">
+        <div class="av-ring"></div>
+        <div class="av-inner"><img src="assets/pfps/helyz2026.png" alt="helyz"></div>
+      </div>
+      <div class="sb-name">helyz</div>
+      <div class="sb-role">pwnzor :3</div>
+      <div class="sb-bio">Offensive Security<br>Lost in the Cyberspace.</div>
+      <div class="sb-stats">
+        <div class="sstat"><span class="sstat-n" id="stat-posts">-</span><span class="sstat-l">posts</span></div>
+        <div class="sstat"><span class="sstat-n" id="stat-proj">-</span><span class="sstat-l">Projects</span></div>
+        <div class="sstat"><span class="sstat-n">3</span><span class="sstat-l">CTFs</span></div>
+        <div class="sstat"><span class="sstat-n">∞</span><span class="sstat-l">Curiosity</span></div>
+      </div>
+      <div class="sb-socials">
+        <a href="https://github.com/he7yz" class="sb-soc" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.495.998.107-.776.418-1.305.76-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://twitter.com/helyz_" class="sb-soc" target="_blank" rel="noopener" title="Twitter / X">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.74-8.859L1.254 2.25H8.08l4.26 5.629 5.902-5.629Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" class="sb-soc" title="RSS">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>
+        </a>
+      </div>
+    </div>
+    <nav class="sb-nav">
+      <a href="blog.html"       class="nav-link"><span class="ni">▸</span> Home</a>
+      <a href="categories.html" class="nav-link"><span class="ni">▸</span> Categories</a>
+      <a href="tags.html"       class="nav-link"><span class="ni">▸</span> Tags</a>
+      <a href="archives.html"   class="nav-link"><span class="ni">▸</span> Archives</a>
+      <a href="projects.html"   class="nav-link active"><span class="ni">▸</span> Projects</a>
+      <a href="about.html"      class="nav-link"><span class="ni">▸</span> About</a>
+    </nav>
+    <div class="sb-term">
+      <div><span class="t-prompt">$</span> <span class="t-cmd">ls projects/</span></div>
+      <div class="t-out" id="proj-ls">loading...</div>
+      <div><span class="t-prompt">$</span> <span class="t-cursor"></span></div>
+    </div>
+  </aside>
+
+  <div class="main-wrap">
+    <main class="main">
+      <div class="main-content" style="padding:2rem;">
+        <div class="sec-hd">projects</div>
+        <div id="filter-tabs" style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1.5rem;"></div>
+        <div class="forum-grid" id="forum-grid">
+          <div class="forum-card" style="animation:none;pointer-events:none;">
+            <div class="fc-banner" style="background:var(--surface2);"></div>
+            <div class="fc-body">
+              <div class="skeleton sk-line sk-h18 sk-w70" style="margin-bottom:.4rem;"></div>
+              <div class="skeleton sk-line sk-w90"></div>
+              <div class="skeleton sk-line sk-w70"></div>
+            </div>
+          </div>
+          <div class="forum-card" style="animation:none;pointer-events:none;">
+            <div class="fc-banner" style="background:var(--surface2);"></div>
+            <div class="fc-body">
+              <div class="skeleton sk-line sk-h18 sk-w70" style="margin-bottom:.4rem;"></div>
+              <div class="skeleton sk-line sk-w90"></div>
+            </div>
+          </div>
+          <div class="forum-card" style="animation:none;pointer-events:none;">
+            <div class="fc-banner" style="background:var(--surface2);"></div>
+            <div class="fc-body">
+              <div class="skeleton sk-line sk-h18 sk-w70" style="margin-bottom:.4rem;"></div>
+              <div class="skeleton sk-line sk-w90"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div>2026 <span class="ft-accent">helyz</span>. Certain rights reserved.</div>
+      <div class="ft-links">
+        <a href="https://github.com/he7yz" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://twitter.com/helyz_" target="_blank" rel="noopener">Twitter</a>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<script src="js/main.js" defer></script>
+<script src="js/music.js" defer></script>
+<script>
+function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+let allProjects=[],activeFilter='all';
+
+async function init(){
+  try{
+    const[pr,po]=await Promise.all([fetch('projects.json'),fetch('posts.json').catch(()=>({json:()=>[]}))]);
+    allProjects=await pr.json();
+    const posts=await po.json().catch(()=>[]);
+    const sp=document.getElementById('stat-posts');
+    const sj=document.getElementById('stat-proj');
+    if(sp)sp.textContent=posts.length;
+    if(sj)sj.textContent=allProjects.length;
+    const ls=document.getElementById('proj-ls');
+    if(ls)ls.innerHTML=allProjects.map(p=>esc(p.id)+'/').join('<br>');
+    buildFilters();renderGrid();
+  }catch(e){
+    const g=document.getElementById('forum-grid');
+    if(g)g.innerHTML='<p style="color:var(--text-lo);font-size:.74rem;grid-column:1/-1;">Could not load — serve over HTTP: <span style="color:var(--accent)">python3 -m http.server 8080</span></p>';
+  }
+}
+
+function buildFilters(){
+  const statuses=['all',...new Set(allProjects.map(p=>p.status).filter(Boolean))];
+  document.getElementById('filter-tabs').innerHTML=statuses.map(s=>`<button id="ftab-${esc(s)}" onclick="setFilter('${esc(s)}')" style="background:none;border:1px solid var(--border2);color:var(--text-lo);padding:.24rem .65rem;border-radius:3px;font-size:.62rem;font-family:var(--font);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .13s;">${esc(s)}</button>`).join('');
+  setFilter('all');
+}
+
+function setFilter(status){
+  activeFilter=status;
+  document.querySelectorAll('#filter-tabs button').forEach(b=>{b.style.color='var(--text-lo)';b.style.borderColor='var(--border2)';b.style.background='none';});
+  const ab=document.getElementById('ftab-'+status);
+  if(ab){ab.style.color='var(--accent)';ab.style.borderColor='var(--a-border)';ab.style.background='var(--a-bg)';}
+  renderGrid();
+}
+
+function renderGrid(){
+  const list=activeFilter==='all'?allProjects:allProjects.filter(p=>p.status===activeFilter);
+  const grid=document.getElementById('forum-grid');
+  if(!grid)return;
+  if(!list.length){grid.innerHTML='<p style="color:var(--text-lo);font-size:.74rem;grid-column:1/-1;padding:1rem 0;">No projects found.</p>';return;}
+  grid.innerHTML=list.map(p=>{
+    const banner=p.image?`<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">`:'<div class="fc-banner-ph">&#9881;</div>';
+    const badge=p.status?`<span class="fc-status ${esc(p.status)}"><span class="fc-status-dot"></span>${p.status==='wip'?'WIP':'Done'}</span>`:'';
+    const stack=(p.stack||[]).map(t=>`<span class="fc-tag">${esc(t)}</span>`).join('');
+    const links=[p.github&&`<a href="${esc(p.github)}" class="fc-link" target="_blank" rel="noopener">→ github</a>`,p.demo&&`<a href="${esc(p.demo)}" class="fc-link" target="_blank" rel="noopener">→ demo</a>`,p.writeup&&`<a href="post.html?file=${encodeURIComponent(p.writeup)}" class="fc-link">→ writeup</a>`].filter(Boolean).join('');
+    const href=p.post?`post.html?file=${encodeURIComponent(p.post)}`:(p.github||'#');
+    return`<a href="${esc(href)}" class="forum-card"><div class="fc-banner">${banner}</div><div class="fc-body"><div class="fc-top"><div class="fc-title">${esc(p.name)}</div>${badge}</div><div class="fc-desc">${esc(p.description)}</div><div class="fc-stack">${stack}</div><div class="fc-footer"><span>${esc(p.date||'')}</span><div class="fc-links">${links}</div></div></div></a>`;
+  }).join('');
+}
+
+document.readyState==='loading'?document.addEventListener('DOMContentLoaded',init):init();
+</script>
+</body>
+</html>
