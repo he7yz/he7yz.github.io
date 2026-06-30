@@ -1,0 +1,41 @@
+[
+  {
+    "id": "mikulyze",
+    "name": "Project: Mikulyze",
+    "description": "Miku, Miku, you can call me Miku. Blue hair, blue tie, hiding in your WiFi!",
+    "stack": ["Python", "Raspberry Pi Zero 2W"],
+    "status": "wip",
+    "date": "2025",
+    "image": "assets/projects/mikulyze.png",
+    "github": "https://github.com/he7yz/mikulyze",
+    "demo": null,
+    "post": null,
+    "writeup": null
+  },
+  {
+    "id": "screenscream",
+    "name": "screenscream",
+    "description": "The screen screams.",
+    "stack": ["Roblox Engine", "LuaU"],
+    "status": "wip",
+    "date": "2025",
+    "image": "assets/projects/screenscream.png",
+    "github": null,
+    "demo": null,
+    "post": null,
+    "writeup": null
+  },
+  {
+    "id": "tower-crawler",
+    "name": "Tower Crawler",
+    "description": "You were once a King, but now, you've been dethroned by your own brother. Sent to the depths of a dungeon cell, your mission is to crawl your way back and reclaim the throne.",
+    "stack": ["Godot Engine"],
+    "status": "wip",
+    "date": "2025",
+    "image": "assets/projects/helyz-site.png",
+    "github": "https://github.com/WaterTango/Mini-it-project-tc3l-09",
+    "demo": "https://helyz.itch.io/tower-crawler",
+    "post": null,
+    "writeup": null
+  }
+]
