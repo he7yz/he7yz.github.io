@@ -585,13 +585,21 @@ body {
   font-style:italic; font-size:.74rem;
 }
 
-.article ul, .article ol {
-  margin:.65rem 0 .88rem 1.1rem;
-  font-size:.77rem; color:var(--text); line-height:1.85;
+.article ul {
+  list-style: disc;
+  margin: .65rem 0 .88rem 1.4rem;
+  font-size: .77rem; color: var(--text); line-height: 1.85;
 }
-.article li           { margin-bottom:.18rem; }
-.article ul li::marker{ color:var(--accent); }
-.article ol li::marker{ color:var(--text-lo); }
+.article ol {
+  list-style: decimal;
+  margin: .65rem 0 .88rem 1.4rem;
+  font-size: .77rem; color: var(--text); line-height: 1.85;
+}
+.article ul ul    { list-style: circle; }
+.article ul ul ul { list-style: square; }
+.article li            { margin-bottom: .22rem; }
+.article ul li::marker { color: var(--accent); }
+.article ol li::marker { color: var(--text-lo); font-weight: 600; }
 
 .article table {
   width:100%; border-collapse:collapse;
