@@ -287,6 +287,7 @@ body {
 /* section heading */
 .sec-hd {
   font-size:.61rem; font-weight:600;
+  font-family: var(--font-mc);
   letter-spacing:.18em; text-transform:uppercase;
   color:var(--text-lo);
   margin-bottom:1.5rem;
