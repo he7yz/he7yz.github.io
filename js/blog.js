@@ -33,7 +33,7 @@ async function init() {
   }
 }
 
-/* ---- render post cards ---- */
+/* render_post_cards */
 function renderPosts() {
   const start = (currentPage - 1) * PER_PAGE;
   const page  = filtered.slice(start, start + PER_PAGE);
@@ -85,7 +85,7 @@ function attachGlitch(el) {
   el.addEventListener('mouseenter', () => {
     if (tid) return;
     let step = 0;
-    const STEPS = 11;
+    const STEPS = 15;
 
     tid = setInterval(() => {
       step++;
@@ -101,7 +101,7 @@ function attachGlitch(el) {
         tid = null;
         el.textContent = original;
       }
-    }, 46);
+    }, 69);
   });
 
   el.addEventListener('mouseleave', () => {
