@@ -1,9 +1,22 @@
 [
   {
+    "id": "shizukulyze",
+    "name": "<0x00> Shizukulyze",
+    "description": "The 8th Phantom Troupe, 8-Channel Jammer.",
+    "stack": ["Offensive Security","Embedded Engineering","C++", "ESP32"],
+    "status": "wip",
+    "date": "2026",
+    "image": "assets/projects/shizukulyze.png",
+    "github": null,
+    "demo": null,
+    "post": null,
+    "writeup": null
+  },
+  {
     "id": "mikulyze",
-    "name": "Project: Mikulyze",
+    "name": "<0x00> Mikulyze",
     "description": "Miku, Miku, you can call me Miku. Blue hair, blue tie, hiding in your WiFi!",
-    "stack": ["Embedded Engineering","Python", "Raspberry Pi Zero 2W", "Hashcat", "Bettercap"],
+    "stack": ["Offensive Security","Embedded Engineering","Python", "Raspberry Pi Zero 2W", "Hashcat", "Bettercap"],
     "status": "done",
     "date": "2025",
     "image": "assets/projects/mikulyze.png",
@@ -28,7 +41,7 @@
   {
     "id": "tower-crawler",
     "name": "Tower Crawler",
-    "description": "2D Top-down Roguelike Story-Rich RPG Game",
+    "description": "2D Top-down Roguelike Story-Rich RPG Game.",
     "stack": ["Game Development","Godot Engine (GDscript)"],
     "status": "wip",
     "date": "2025",
