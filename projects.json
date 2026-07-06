@@ -1,8 +1,21 @@
 [
   {
+    "id": "alice",
+    "name": "Alice",
+    "description": "MMUCraft's beloved mascot, a multipurpose & your friendly AI Discord Bot <3",
+    "stack": ["AI","Discord.js","Ollama", "LLM", "Node.js"],
+    "status": "wip",
+    "date": "2026",
+    "image": "assets/projects/alice.png",
+    "github": null,
+    "demo": null,
+    "post": null,
+    "writeup": null
+  },
+  {
     "id": "shizukulyze",
     "name": "<0x00> Shizukulyze",
-    "description": "The 8th Phantom Troupe, 8-Channel Jammer.",
+    "description": "The 8th Phantom Troupe, 8-Channel Jammer. Strong and fierce just like her left arm.",
     "stack": ["Offensive Security","Embedded Engineering","C++", "ESP32"],
     "status": "wip",
     "date": "2026",
@@ -42,7 +55,7 @@
     "id": "tower-crawler",
     "name": "Tower Crawler",
     "description": "2D Top-down Roguelike Story-Rich RPG Game.",
-    "stack": ["Game Development","Godot Engine (GDscript)"],
+    "stack": ["Game Development","Godot Engine (GDscript)","Aseprite"],
     "status": "wip",
     "date": "2025",
     "image": "assets/projects/tower-crawler.png",
