@@ -24,18 +24,18 @@
   --text-lo:    #4b5563;
 
   /* phantom purple */
-  --accent:     #541A8B; 
+  --accent:     #6b66c6; 
   --a-bg:       rgba(84, 26, 139,.07);
   --a-border:   rgba(84, 26, 139,.22);
 
-  --c-ctf:      #fb923c;
-  --c-re:       #a78bfa;
-  --c-forensics:#22d3ee;
-  --c-crypto:   #f472b6;
+  --c-ctf:      #ff5c00;
+  --c-re:       #FFFF00;
+  --c-forensics:#40E0D0;
+  --c-crypto:   #800080;
   --c-web:      #60a5fa;
-  --c-pwn:      #f87171;
-  --c-misc:     #a3e635;
-  --c-malware:  #fbbf24;
+  --c-pwn:      #ff0000;
+  --c-misc:     #9333ea;
+  --c-malware:  #50C878;
 
   --sb-w:  18.5rem;
   --rb-w:  15rem;
