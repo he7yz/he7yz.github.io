@@ -284,6 +284,32 @@ body {
 }
 @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
 
+/* discord_lanyard_badge */
+.sb-lanyard {
+  margin: 0 1.25rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sb-lanyard a {
+  display: block;
+  width: 100%;
+}
+
+.sb-lanyard img {
+  width: 100%;
+  border-radius: var(--r);
+  border: 1px solid var(--border2);
+  background: var(--surface);
+  transition: border-color .18s, box-shadow .18s;
+}
+
+.sb-lanyard a:hover img {
+  border-color: var(--a-border);
+  box-shadow: 0 4px 12px rgba(84, 26, 139, 0.15);
+}
+
 /* section heading */
 .sec-hd {
   font-size:.61rem; font-weight:600;
