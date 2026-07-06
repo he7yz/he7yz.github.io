@@ -356,9 +356,10 @@ body {
 .pc-date  { font-size:.63rem; color:var(--text-lo); }
 
 .pc-cat {
-  font-size:.57rem; font-weight:700;
-  letter-spacing:.1em; text-transform:uppercase;
-  padding:.1em .48em;
+  font-family: var(--font-mc);
+  font-size:.57rem; font-weight: normal;
+  letter-spacing:0; text-transform:uppercase;
+  padding:.2em .5em;
   border-radius:2px;
   border-width:1px; border-style:solid;
 }
