@@ -70,6 +70,13 @@ async function loadPost() {
 
 function populateHeader(meta, allPosts) {
   document.getElementById('post-title').textContent = meta.title;
+  const thumbWrap = document.getElementById('post-thumb-wrap');
+  const thumbImg  = document.getElementById('post-thumb-img');
+  if (thumbWrap && thumbImg && meta.thumbnail) {
+  thumbImg.src = meta.thumbnail;
+  thumbImg.alt = meta.title;
+  thumbWrap.style.display = 'block';
+}
   document.getElementById('bc-cat').textContent     = meta.category;
   document.getElementById('bc-title').textContent   = meta.title.split('—')[0].trim();
   document.getElementById('post-date').textContent  = meta.date;
