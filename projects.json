@@ -2,7 +2,7 @@
   {
     "id": "alice",
     "name": "Alice",
-    "description": "MMUCraft's beloved mascot, a multipurpose & your friendly AI Discord Bot <3",
+    "description": "MMUCraft's beloved mascot, your friendly AI Multipurpose Discord Bot <3",
     "stack": ["AI","Discord.js","Ollama", "LLM", "Node.js"],
     "status": "wip",
     "date": "2026",
@@ -13,10 +13,10 @@
     "writeup": null
   },
   {
-    "id": "shizukulyze",
+    "id": "0x00-shizukulyze",
     "name": "<0x00> Shizukulyze",
     "description": "The 8th Phantom Troupe, 8-Channel Jammer. Strong and fierce just like her left arm.",
-    "stack": ["Offensive Security","Embedded Engineering","C++", "ESP32"],
+    "stack": ["Offensive Security","Embedded Engineering","Electrical Engineering","C++","ESP32"],
     "status": "wip",
     "date": "2026",
     "image": "assets/projects/shizukulyze.png",
@@ -26,7 +26,7 @@
     "writeup": null
   },
   {
-    "id": "mikulyze",
+    "id": "0x00-mikulyze",
     "name": "<0x00> Mikulyze",
     "description": "Miku, Miku, you can call me Miku. Blue hair, blue tie, hiding in your WiFi!",
     "stack": ["Offensive Security","Embedded Engineering","Python", "Raspberry Pi Zero 2W", "Hashcat", "Bettercap"],
