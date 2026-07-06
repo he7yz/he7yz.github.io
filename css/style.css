@@ -24,22 +24,22 @@
   --text-lo:    #4b5563;
 
   /* phantom purple */
-  --accent:     #541A8B; 
+  --accent:     #6b66c6; 
   --a-bg:       rgba(84, 26, 139,.07);
   --a-border:   rgba(84, 26, 139,.22);
 
-  --c-ctf:      #fb923c;
-  --c-re:       #a78bfa;
-  --c-forensics:#22d3ee;
-  --c-crypto:   #f472b6;
+  --c-ctf:      #ff5c00;
+  --c-re:       #FFFF00;
+  --c-forensics:#40E0D0;
+  --c-crypto:   #800080;
   --c-web:      #60a5fa;
-  --c-pwn:      #f87171;
-  --c-misc:     #a3e635;
-  --c-malware:  #fbbf24;
+  --c-pwn:      #ff0000;
+  --c-misc:     #9333ea;
+  --c-malware:  #50C878;
 
   --sb-w:  18.5rem;
   --rb-w:  15rem;
-  --font:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --font:  'IBM Plex Mono', monospace;
   --font-pixel: 'Silkscreen', cursive;
   --font-mc: 'Monocraft', monospace;
   --r:     4px;
@@ -284,6 +284,32 @@ body {
 }
 @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
 
+/* discord_lanyard_badge */
+.sb-lanyard {
+  margin: 0 1.25rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sb-lanyard a {
+  display: block;
+  width: 100%;
+}
+
+.sb-lanyard img {
+  width: 100%;
+  border-radius: var(--r);
+  border: 1px solid var(--border2);
+  background: var(--surface);
+  transition: border-color .18s, box-shadow .18s;
+}
+
+.sb-lanyard a:hover img {
+  border-color: var(--a-border);
+  box-shadow: 0 4px 12px rgba(84, 26, 139, 0.15);
+}
+
 /* section heading */
 .sec-hd {
   font-size:.61rem; font-weight:600;
@@ -356,9 +382,10 @@ body {
 .pc-date  { font-size:.63rem; color:var(--text-lo); }
 
 .pc-cat {
-  font-size:.57rem; font-weight:700;
-  letter-spacing:.1em; text-transform:uppercase;
-  padding:.1em .48em;
+  font-family: var(--font-mc);
+  font-size:.57rem; font-weight: normal;
+  letter-spacing:0; text-transform:uppercase;
+  padding:.2em .5em;
   border-radius:2px;
   border-width:1px; border-style:solid;
 }
@@ -540,7 +567,7 @@ body {
 }
 
 .article h2 {
-  font-size:.9rem; font-weight:700;
+  font-size:1rem; font-weight:700;
   color:var(--text-hi); margin:2rem 0 .68rem;
   padding-bottom:.36rem;
   border-bottom:1px solid var(--border);
@@ -549,19 +576,19 @@ body {
 .article h2::before { content:'#'; color:var(--accent); font-size:.76rem; flex-shrink:0; }
 
 .article h3 {
-  font-size:.82rem; font-weight:600;
+  font-size:.95rem; font-weight:600;
   color:var(--text-hi); margin:1.4rem 0 .48rem;
 }
 .article h3::before { content:'## '; color:var(--text-lo); font-size:.68rem; }
 
 .article h4 {
-  font-size:.77rem; font-weight:600;
+  font-size:.90rem; font-weight:600;
   color:var(--text); margin:1.1rem 0 .38rem;
 }
 .article h4::before { content:'### '; color:var(--text-lo); font-size:.64rem; }
 
 .article p {
-  font-size:.77rem; color:var(--text);
+  font-size:.85rem; color:var(--text);
   line-height:1.9; margin-bottom:.88rem;
 }
 
@@ -645,6 +672,27 @@ body {
   font-size:.71rem !important;
   overflow-x:auto;
   line-height:1.72;
+
+  white-space: pre !important;
+  max-height: 400px;
+  overflow-x: auto;
+  overflow-y: auto;
+  line-height: 1.72;
+}
+
+.article pre code::-webkit-scrollbar { 
+  width: 6px; 
+  height: 6px; 
+}
+.article pre code::-webkit-scrollbar-track { 
+  background: var(--surface2); 
+}
+.article pre code::-webkit-scrollbar-thumb { 
+  background: var(--border2); 
+  border-radius: 3px; 
+}
+.article pre code::-webkit-scrollbar-thumb:hover { 
+  background: var(--accent); 
 }
 
 /* codeblocks_wrapper */
@@ -873,7 +921,7 @@ body {
 /* hightlight_js_overrides */
 .hljs                        { background:var(--surface2) !important; color:var(--text) !important; }
 .hljs-keyword,
-.hljs-selector-tag           { color:var(--c-re)        !important; }
+.hljs-selector-tag           { color:var(--c-forensics)        !important; }
 .hljs-string,
 .hljs-attr                   { color:var(--c-misc)      !important; }
 .hljs-comment,
