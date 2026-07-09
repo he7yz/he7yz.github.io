@@ -319,7 +319,7 @@ s.close()
 
 ## Windows
 
-### **Description**
+**Description**
 This series centers on a single Windows VM. Your objective is to locate flags hidden throughout the machine, planted using techniques commonly used by threat actors for persistence and credential storage. 
 
 The theme is **Operating systems & persistence techniques**. 
@@ -331,7 +331,7 @@ Threat actors frequently embed persistence mechanisms in predictable but overloo
 **Credentials:** OS-CTF PIN: 220526 
 **CTFUser Password:** CTFLocalP@ss123!
 
-### **Rules of Engagement**
+**Rules of Engagement**
 - Do not change the CTFUser or any other password. This isn't just bad practice — on this VM, it will actively destroy the flag tied to that credential. Changing it is the in-game equivalent of bad OPSEC: it tips off your "target" and burns your access. Treat it as out of scope. 
 - Do not power off the VM, including force shutdowns. Think of it like pulling the plug on a real victim machine mid-engagement — ungraceful shutdowns can corrupt running services and will remove flags tied to active state. 
 - If you accidentally force-power-off the VM, revert to the original snapshot/image rather than continuing — some flags rely on services that won't recover cleanly otherwise.
@@ -339,7 +339,7 @@ Threat actors frequently embed persistence mechanisms in predictable but overloo
 Link 1: [https://drive.google.com/drive/folders/1cDi0SkUFxGmHQ-waIq9Y0esNa50QuWDj?usp=sharing](https://drive.google.com/drive/folders/1cDi0SkUFxGmHQ-waIq9Y0esNa50QuWDj?usp=sharing "https://drive.google.com/drive/folders/1cDi0SkUFxGmHQ-waIq9Y0esNa50QuWDj?usp=sharing") 
 Link 2: [https://drive.google.com/drive/folders/1lgu5WGo1e-ec8XdJrN8NNcK1pTvjmoRs?usp=sharing](https://drive.google.com/drive/folders/1lgu5WGo1e-ec8XdJrN8NNcK1pTvjmoRs?usp=sharing "https://drive.google.com/drive/folders/1lgu5WGo1e-ec8XdJrN8NNcK1pTvjmoRs?usp=sharing")
 
-#### Local
+### Local
 
 **Description:**
 Storing credentials in your OS's native credential store instead of a dedicated password manager has consequences. Finding this flag will show you why.
@@ -358,7 +358,7 @@ Set-MpPreference -DisableRealtimeMonitoring $true
    
    >> 🚩 Flag Found: OWASPKL{530cfdf60e73770f2d29a707870bf141}
 
-#### History
+### History
 
 **Description:**
 Always clean your types.
@@ -377,7 +377,7 @@ Always clean your types.
    
    >>  🚩 Flag Found: OWASPKL{c85afb6ac751e0aaf1678947a172c935}
 
-#### Run
+### Run
 
 **Description:**
 Did you solved Register and checked all registries?
@@ -404,7 +404,7 @@ Get-Content "C:\Windows\System32\svchelper.exe"
 
 >> 🚩 Flag Found: OWASPKL{964b51ea1e502c770564c66f9fc9f996}
 
-#### Pipe
+### Pipe
 
 IPC but not a shopping Center
 
@@ -449,7 +449,7 @@ Found a Base64 string.
 
 >> 🚩 Flag Found: OWASPKL{2012cb63445eda6c68a79f17e6fc9c46}
 
-#### Fire
+### Fire
 
 **Description:**
 Ntdll.dll and kernel32.dll are commonly used files. What about the uncommon ones?
