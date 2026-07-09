@@ -1,5 +1,22 @@
 [
   {
+    "id": "OWASPKL_CTF{Labyrinth} Team Project Sekai Writeup",
+    "title": "OWASPKL Liga CTF {Labyrinth} Writeup",
+    "date": "2026-06-22",
+    "category": "CTF Writeup",
+    "catClass": "c-ctf",
+    "thumbnail": "assets/thumbnails/OWASPKL_LIGA_CTF_2026.png",
+    "tags": ["CTF", "Digital Forensics (DFir)", "Windows","Cookie Tampering","Industrial Control Systems (ICS)", "Supervisory Control And Data Acquisition (SCADA)", "Operational Technology (OT)"],
+    "excerpt": "Team Project Sekai by helyz, hosted by OWASP Kuala Lumpur Chapter (Week 5)",
+    "challenge": {
+      "name": "PLUS - I, PLUS - II, Local, History, Run, Pipe, Fire, Mailware",
+      "difficulty": null,
+      "points": "7885",
+      "solves": 8,
+      "tools": "curl / Python / powershell / command prompt / mimikatz / regedit / autoruns / some string reverser tool"
+    }
+  },
+  {
     "id": "OWASPKL_CTF{WebExploitation} Team Project Sekai Writeup",
     "title": "OWASPKL Liga CTF {WebExploitation} Writeup",
     "date": "2026-06-15",
@@ -7,7 +24,7 @@
     "catClass": "c-ctf",
     "thumbnail": "assets/thumbnails/OWASPKL_LIGA_CTF_2026.png",
     "tags": ["CTF", "OWASP Top 10", "Linux", "Cloudflare", "Directory Traversal", "Cookie Tampering", "Local File Inclusion Exploit (LFI)", "XML External Entity Injection (XXE)", "KONAMI Cheatcode"],
-    "excerpt": "My writeups for the OWASPKL LIGA CTF Web Exploitation Category Challenges",
+    "excerpt": "Team Project Sekai by helyz, hosted by OWASP Kuala Lumpur Chapter (Week 4)",
     "challenge": {
       "name": "Keluar, Novita, Nate, Laufey, goat2, imej-anda, thegoat, The Amazing Digital Adventure",
       "difficulty": "Very Easy → Hard",
@@ -23,8 +40,8 @@
     "category": "CTF Writeup",
     "catClass": "c-ctf",
     "thumbnail": "assets/thumbnails/OWASPKL_LIGA_CTF_2026.png",
-    "tags": ["CTF", "Got Root?", "Linux", "Shellcode", "Grafana", "CVE"],
-    "excerpt": "My writeups for the OWASPKL LIGA CTF Boot2Root Category Challenges",
+    "tags": ["CTF", "Got Root? (PrivEsc)", "Linux", "Windows","Shellcode", "CVE", "Grafana", "Directory Traversal", "Local File Inclusion Exploit (LFI)", "SQL Injection (SQLi)"],
+    "excerpt": "Team Project Sekai by helyz, hosted by OWASP Kuala Lumpur Chapter (Week 2)",
     "challenge": {
       "name": "GGEZAF, Spray And Pray Series, Routine Series, Chains Of Attacks Series, The Art Of Evasion And Persistence",
       "difficulty": "Easy → Very Hard",
@@ -36,11 +53,11 @@
   {
     "id": "post-test",
     "title": "title-test",
-    "date": "2025-03-10",
+    "date": "2025-03-09",
     "category": "0x00",
     "catClass": "c-misc",
     "thumbnail": "assets/thumbnails/vocaloids.png",
-    "tags": ["miku","meiko","kaito","ia","luka","rin","len","gumi","teto"],
+    "tags": ["miku","meiko","kaito","luka","rin","len","gumi","gakupo"],
     "excerpt": "we are vocaloids!",
     "challenge": {
       "name": "Mikudayo",
