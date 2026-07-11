@@ -1,11 +1,11 @@
 SekaiCTF is an International CTF hosted by [Project Sekai Team](https://sekai.team/) on the [CTFTime Platform](https://ctftime.org/event/3113).
 
-The CTF format is Jeopardy.
+The CTF format is **Jeopardy**.
 
 Team Hitorinbo Envy 
 by helyz
 
->>> 🏳️ Flag Format:`SEKAI{[\x20-\x7e]+}`
+>> 🏳️ Flag Format:`SEKAI{[\x20-\x7e]+}`
 
 ## Web
 
@@ -53,7 +53,7 @@ Poor migu lost her leek 🥀🥀
 
 Next.js version is **16.2.9**. Close to an exposed **0day** of **[CVE-2026-44574](https://nvd.nist.gov/vuln/detail/CVE-2025-29927)**, the Next.js middleware authorization bypass.
 
-5. Checking Next.js build ID, we get `SS4os-TiYbQ1rBLWNeKcv`. 
+5. Checking Next.js build ID, resulted in `SS4os-TiYbQ1rBLWNeKcv`. 
 
 ![](Pasted%20image%2020260706034320.png)
 
@@ -64,9 +64,9 @@ Next.js version is **16.2.9**. Close to an exposed **0day** of **[CVE-2026-44574
 7. Checked `cookies.txt`
 
 ![](Pasted%20image%2020260706034513.png)
-	We get:
-		1. `ticket_uuid` = `68289780-5e7c-412e-a475-05b0fb0d334d`
-		2. `session` = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbHl6IiwidGllciI6IlJFR1VMQVIiLCJ0aWNrZXRVdWlkIjoiNjgyODk3ODAtNWU3Yy00MTJlLWE0NzUtMDViMGZiMGQzMzRkIiwic3ViIjoiMyIsImlhdCI6MTc4MzI4MDQyMH0.wHEEFbCExuRyKcpiE9vRUUduaQQ1T9VM2-9uzBYzcbI`
+We get:
+- `ticket_uuid` = `68289780-5e7c-412e-a475-05b0fb0d334d`
+- `session` = `<the very long one from the pic, cant paste it here else website breaks ;-;`
 
 8. Exploiting the parameter mismatch with the given 
 	1. `buildID` = `SS4os-TiYbQ1rBLWNeKcv`
@@ -547,12 +547,12 @@ base_mod = int.from_bytes(prefix + b'6'*num + suffix, 'big') % Miku
 target = (-base_mod) % Miku
 
 # figuring out which chars to flip from 6 to 7
-exps = [total_len - 1 - (len(prefix) + i) for i in range(n)]
+exps = [total_len - 1 - (len(prefix) + i) for i in range(num)]
 bitpos = [(8*e) % 67 for e in exps]
 pos_of_bit = {k: i for i, k in enumerate(bitpos)}
 
 # start with 6, flip chars to 7
-chars = ['6'] * n
+chars = ['6'] * num
 for k in range(67):
     if (target >> k) & 1:
         chars[pos_of_bit[k]] = '7'
@@ -1189,12 +1189,15 @@ Author: sy1vi3
 Tags: Stego
 
 **Description**
+
 i rolled my own stego and made sure to make it wayyyyy too hard for someone to guess how it works...
 
 er, i mean claude did. i totally read the code tho.
 
 **Attachments**
+
 1 file, 11 MB total
+
 [misc_impossible-stego.tar.gz 11 MB](https://sekaictf-2026-files.storage.googleapis.com/uploads/fa71eacff0710f426ea65a419c917044d2915d3e2a31dc11a8bead44f72aa781/misc_impossible-stego.tar.gz)
 
 1. We first unzip the file to take a peek of whats inside... we get 2 files:
@@ -1833,7 +1836,7 @@ Author: Marc
 
 Tags: Sekai
 
-**Description:**
+**Description**
 
 Planning to attend the SEKAI Conference? Download the official SEKAI ID apps to receive and manage your digital conference credential.
 
@@ -1925,7 +1928,7 @@ The UI and the beauty of their [infrastructure](https://blog.es3n1n.eu/posts/sek
 
 I'm really happy whenever there's Miku inside the questions, not to mention the Game categories, where they even included Minecraft as part of their CTF Challenges. 
 
-Come to think of it, the Easy questions were already quite hard to me, compared to local CTF's ive joined in my area... The skill gap is crazy... I do wanna smoke on what these ppl are smokin' *(preferably, i smoke [Pocky](https://www.google.com/search?client=firefox-b-d&channel=entpr&q=pocky) bcuz i dont smoke :3)*
+Come to think of it, the Easy questions were already quite hard to me, compared to local CTF's ive joined in my area... The skill gap is crazy... I do wanna smoke on what these ppl are smokin' *(preferably, i smoke [Pocky](https://www.google.com/search?client=firefox-b-d&channel=entpr&q=pocky) bcuz i dont actually smoke :3)*
 
 ![https://youtu.be/Uk5yWk_BlzU?si=NwGAMCun99qQqh8f&t=10](Pasted%20image%2020260711221739.png)
 
