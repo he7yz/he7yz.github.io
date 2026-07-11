@@ -1,5 +1,22 @@
 [
   {
+    "id": "SekaiCTF 2026 Team Hitorinbo Envy Writeup",
+    "title": "Sekai CTF 2026 Writeup",
+    "date": "2026-06-27 - 2026-06-29",
+    "category": "CTF Writeup",
+    "catClass": "c-ctf",
+    "thumbnail": "assets/thumbnails/SEKAI_CTF_2026.png",
+    "tags": ["CTF", "0day", "OWASP Top 10", "Linux", "Android","Miku", "CVE", "Next.js", "Cookie Tampering", "Local File Inclusion Exploit (LFI)", "SQL Injection (SQLi)","Cryptography", "Blockchain", "Etherium", "Solana", "Steganography", "AI", "Minecraft"],
+    "excerpt": "Team Hitorinbo Envy by helyz, hosted by Project Sekai Team on the CTFTime Platform",
+    "challenge": {
+      "name": "Migurimental, Bejeweled, 6-7 Puzzle Hunt, oneline6cryp7o, PP Farming, PP Farming 2, skyblock, impossible stego, Sekai ID",
+      "difficulty": "Easy -> Hard",
+      "points": "478",
+      "solves": 10,
+      "tools": "curl / socat / python / noq / foundry / solana / adb / scrscpy / sqlite3 / ultimmc"
+    }
+  },
+  {
     "id": "OWASPKL_CTF{Labyrinth} Team Project Sekai Writeup",
     "title": "OWASPKL Liga CTF {Labyrinth} Writeup",
     "date": "2026-06-22",
@@ -57,7 +74,7 @@
     "category": "0x00",
     "catClass": "c-misc",
     "thumbnail": "assets/thumbnails/vocaloids.png",
-    "tags": ["miku","meiko","kaito","luka","rin","len","gumi","gakupo"],
+    "tags": ["Miku","meiko","kaito","luka","rin","len","gumi","gakupo"],
     "excerpt": "we are vocaloids!",
     "challenge": {
       "name": "Mikudayo",
