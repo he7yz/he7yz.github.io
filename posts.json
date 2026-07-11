@@ -2,15 +2,15 @@
   {
     "id": "SekaiCTF 2026 Team Hitorinbo Envy Writeup",
     "title": "Sekai CTF 2026 Writeup",
-    "date": "2026-06-27 - 2026-06-29",
+    "date": "2026-06-27 > 2026-06-29",
     "category": "CTF Writeup",
     "catClass": "c-ctf",
-    "thumbnail": "assets/thumbnails/SEKAI_CTF_2026.png",
+    "thumbnail": "assets/thumbnails/Sekai_CTF_2026.png",
     "tags": ["CTF", "0day", "OWASP Top 10", "Linux", "Android","Miku", "CVE", "Next.js", "Cookie Tampering", "Local File Inclusion Exploit (LFI)", "SQL Injection (SQLi)","Cryptography", "Blockchain", "Etherium", "Solana", "Steganography", "AI", "Minecraft"],
     "excerpt": "Team Hitorinbo Envy by helyz, hosted by Project Sekai Team on the CTFTime Platform",
     "challenge": {
       "name": "Migurimental, Bejeweled, 6-7 Puzzle Hunt, oneline6cryp7o, PP Farming, PP Farming 2, skyblock, impossible stego, Sekai ID",
-      "difficulty": "Easy -> Hard",
+      "difficulty": "Easy > Hard",
       "points": "478",
       "solves": 10,
       "tools": "curl / socat / python / noq / foundry / solana / adb / scrscpy / sqlite3 / ultimmc"
@@ -19,7 +19,7 @@
   {
     "id": "OWASPKL_CTF{Labyrinth} Team Project Sekai Writeup",
     "title": "OWASPKL Liga CTF {Labyrinth} Writeup",
-    "date": "2026-06-22",
+    "date": "2026-06-19 > 2026-06-21",
     "category": "CTF Writeup",
     "catClass": "c-ctf",
     "thumbnail": "assets/thumbnails/OWASPKL_LIGA_CTF_2026.png",
@@ -36,7 +36,7 @@
   {
     "id": "OWASPKL_CTF{WebExploitation} Team Project Sekai Writeup",
     "title": "OWASPKL Liga CTF {WebExploitation} Writeup",
-    "date": "2026-06-15",
+    "date": "2026-06-12 > 2026-06-14",
     "category": "CTF Writeup",
     "catClass": "c-ctf",
     "thumbnail": "assets/thumbnails/OWASPKL_LIGA_CTF_2026.png",
@@ -44,7 +44,7 @@
     "excerpt": "Team Project Sekai by helyz, hosted by OWASP Kuala Lumpur Chapter (Week 4)",
     "challenge": {
       "name": "Keluar, Novita, Nate, Laufey, goat2, imej-anda, thegoat, The Amazing Digital Adventure",
-      "difficulty": "Very Easy → Hard",
+      "difficulty": "Very Easy > Hard",
       "points": "6747",
       "solves": 8,
       "tools": "curl / Python / XML / Cloudflare Worker"
@@ -53,7 +53,7 @@
   {
     "id": "OWASPKL_CTF{Boot2Root} Team Project Sekai Writeup",
     "title": "OWASPKL Liga CTF {Boot2Root} Writeup",
-    "date": "2026-06-01",
+    "date": "2026-05-29 > 2026-05-31",
     "category": "CTF Writeup",
     "catClass": "c-ctf",
     "thumbnail": "assets/thumbnails/OWASPKL_LIGA_CTF_2026.png",
@@ -61,7 +61,7 @@
     "excerpt": "Team Project Sekai by helyz, hosted by OWASP Kuala Lumpur Chapter (Week 2)",
     "challenge": {
       "name": "GGEZAF, Spray And Pray Series, Routine Series, Chains Of Attacks Series, The Art Of Evasion And Persistence",
-      "difficulty": "Easy → Very Hard",
+      "difficulty": "Easy > Very Hard",
       "points": "4829",
       "solves": 9,
       "tools": "QEMU KVM / nmap / ftp / hydra / ssh / curl / sqlite3 / netcat / Python / impacket / hashcat / SMB"
@@ -74,7 +74,7 @@
     "category": "0x00",
     "catClass": "c-misc",
     "thumbnail": "assets/thumbnails/vocaloids.png",
-    "tags": ["Miku","meiko","kaito","luka","rin","len","gumi","gakupo"],
+    "tags": ["Miku","Meiko","Kaito","Luka","Rin","Len","Gumi","Gakupo"],
     "excerpt": "we are vocaloids!",
     "challenge": {
       "name": "Mikudayo",

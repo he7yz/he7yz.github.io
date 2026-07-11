@@ -111,7 +111,7 @@ curl "https://migurimental.chals.sekai.team/backroom" \
 
 11. From `"backstageNote"`, we get the first part of the flag,
 
->>> 🏳️ (1/2) Flag Fragment Found: SEKAI{7h3_l33k_15_b4ck_7h3_cr0wd_15_ch33r1ng_4nd_7h3_
+> 🏳️ (1/2) Flag Fragment Found: SEKAI{7h3_l33k_15_b4ck_7h3_cr0wd_15_ch33r1ng_4nd_7h3_
 
 12. Since we only got a part of a flag, I relooked to the challenge details, and went to the 2nd link. https://migurimental-2.chals.sekai.team. 
 
@@ -134,7 +134,7 @@ Build ID = `VlOPiWVknxOpNtTjt6ctd`
 
 ![](Pasted%20image%2020260706052648.png)
 
->>> 🏳️ (2/2) Flag Fragment Found: c0nc3r7_c4n_f1n4lly_b3g1n_m1ku_m1ku_b34mmmmmmmmmmmm}
+> 🏳️ (2/2) Flag Fragment Found: c0nc3r7_c4n_f1n4lly_b3g1n_m1ku_m1ku_b34mmmmmmmmmmmm}
 
 15. FINALLY OMG, NOW I JUST COMBINE THESE. BRICK BY BRICKKK
 
