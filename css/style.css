@@ -93,6 +93,7 @@ body {
   color: var(--text-lo);
   padding: .28rem .65rem;
   border-radius: var(--r);
+  font-family: var(--font-mc);
   font-size: .7rem; letter-spacing:.05em;
   transition: all .15s;
 }
@@ -673,9 +674,11 @@ body {
   overflow-x:auto;
   line-height:1.72;
 
-  white-space: pre !important;
+  white-space: pre-wrap !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
   max-height: 400px;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: auto;
   line-height: 1.72;
 }
