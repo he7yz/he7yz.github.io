@@ -677,8 +677,8 @@ body {
   white-space: pre-wrap !important;
   word-break: break-word;
   overflow-wrap: anywhere;
-  max-height: 400px;
-  overflow-x: hidden;
+  max-height: 1000px;
+  overflow-x: auto;
   overflow-y: auto;
   line-height: 1.72;
 }

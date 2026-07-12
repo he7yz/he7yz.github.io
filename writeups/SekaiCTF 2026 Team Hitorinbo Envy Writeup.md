@@ -904,7 +904,7 @@ contract Deploy is CTFDeployer {
 
 4. Then the other one, `PerformancePointATM.sol`
 
-```solana
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -1019,7 +1019,7 @@ export ATM2="0xb1B007AA24fEb5E040858e58ba25674Fac9Fe1E3"
 
 6. Reimprovised the `PerformancePointATM.sol` again to `atk2.sol`, this time I hardcoded the `ATM2` key (in a state of time-attack panic :P):
    
-```solana
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
