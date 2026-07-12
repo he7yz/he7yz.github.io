@@ -47,7 +47,7 @@ Poor migu lost her leek 🥀🥀
 
 ![](Pasted%20image%2020260706033029.png)
 
-4. Went to `/access-card` and `/backroom`, found an interesting reply... Made me feel concerned that this is a Next.js based webpage. So I checked it via. console
+4. Went to `/access-card` and `/backroom`, found an interesting reply... By `/backroom` curl, managed to get a header response of `< x-powered-by: Next.js`, proving that this is a Next.js based webpage. So I checked and confirmed it via. console
 
 ![](Pasted%20image%2020260706033133.png)![](Pasted%20image%2020260706050253.png)
 
@@ -122,7 +122,7 @@ Kanade was there again... and the link changed to `/rejected` right after I ente
 13. Finding Next.js Build ID for the 2nd link. Tried the exact same as step 4, but keep getting rejected/error 302, so I approached a different way, with the specified `/rejected` directory
 
 ```bash
-curl -s https://migurimental-2.chals.sekai.team/rejected | grep -oP 'buildId":"\K[^"]+'
+curl -s https://migurimental-2.chals.sekai.team/rejected | grep -oP 'buildId":"[^"]*"'
 ```
 
 ![](Pasted%20image%2020260706052541.png)
@@ -807,7 +807,7 @@ ABI: [
 ```bash
 [helyz@kuro-zephy Blockchain_PP_Farming]$ ~/.foundry/bin/cast send \
 	--rpc-url $RPC --private-key $PKEY \
-	--create <the long ass transaction input from the step above, im not pasting ts here...>
+	--create 0x608060405234801561000f575f5ffd5b5060405161081338038061081383398181016040528101906100319190610114565b805f5f6101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055503360025f6101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505061013f565b5f5ffd5b5f73ffffffffffffffffffffffffffffffffffffffff82169050919050565b5f6100e3826100ba565b9050919050565b6100f3816100d9565b81146100fd575f5ffd5b50565b5f8151905061010e816100ea565b92915050565b5f60208284031215610129576101286100b6565b5b5f61013684828501610100565b91505092915050565b6106c78061014c5f395ff3fe60806040526004361061004d575f3560e01c80633ccfd60b146101145780638da5cb5b1461012a5780639e5faafc146101545780639e8674dc1461015e578063f6e2bb6e1461018857610110565b36610110576001545f5f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16311061010e575f5f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663ed96a9416040518163ffffffff1660e01b81526004015f604051808303815f87803b1580156100f7575f5ffd5b505af1158015610109573d5f5f3e3d5ffd5b505050505b005b5f5ffd5b34801561011f575f5ffd5b506101286101b2565b005b348015610135575f5ffd5b5061013e6102d6565b60405161014b91906104b2565b60405180910390f35b61015c6102fb565b005b348015610169575f5ffd5b50610172610449565b60405161017f9190610526565b60405180910390f35b348015610193575f5ffd5b5061019c61046d565b6040516101a99190610557565b60405180910390f35b60025f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610241576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610238906105ca565b60405180910390fd5b5f60025f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff164760405161028790610615565b5f6040518083038185875af1925050503d805f81146102c1576040519150601f19603f3d011682016040523d82523d5f602084013e6102c6565b606091505b50509050806102d3575f5ffd5b50565b60025f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b5f341161033d576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161033490610673565b60405180910390fd5b346001819055505f5f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663cef4c5d034306040518363ffffffff1660e01b815260040161039e91906104b2565b5f604051808303818588803b1580156103b5575f5ffd5b505af11580156103c7573d5f5f3e3d5ffd5b50505050505f5f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663ed96a9416040518163ffffffff1660e01b81526004015f604051808303815f87803b158015610431575f5ffd5b505af1158015610443573d5f5f3e3d5ffd5b50505050565b5f5f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60015481565b5f73ffffffffffffffffffffffffffffffffffffffff82169050919050565b5f61049c82610473565b9050919050565b6104ac81610492565b82525050565b5f6020820190506104c55f8301846104a3565b92915050565b5f819050919050565b5f6104ee6104e96104e484610473565b6104cb565b610473565b9050919050565b5f6104ff826104d4565b9050919050565b5f610510826104f5565b9050919050565b61052081610506565b82525050565b5f6020820190506105395f830184610517565b92915050565b5f819050919050565b6105518161053f565b82525050565b5f60208201905061056a5f830184610548565b92915050565b5f82825260208201905092915050565b7f6f6e6c79206f776e6572000000000000000000000000000000000000000000005f82015250565b5f6105b4600a83610570565b91506105bf82610580565b602082019050919050565b5f6020820190508181035f8301526105e1816105a8565b9050919050565b5f81905092915050565b50565b5f6106005f836105e8565b915061060b826105f2565b5f82019050919050565b5f61061f826105f5565b9150819050919050565b7f6e656564204554480000000000000000000000000000000000000000000000005f82015250565b5f61065d600883610570565b915061066882610629565b602082019050919050565b5f6020820190508181035f83015261068a81610651565b905091905056fea264697066735822122096d35702e4c7dbb3bba70a12646df01b27a8edbe694a737ec6d0e1bb4937337764736f6c63430008230033000000000000000000000000af190130a683599f006fbaaab2c431e682158dd8
 ```
 
 Full Output:
@@ -1138,9 +1138,13 @@ s/o to our friends that helped with building everything: SKVLLZ, rainedot, white
    
    - an interesting notice board 
    ![](Pasted%20image%2020260711025627.png)
+
+   - Agentic AI playing Minecraft in 2026 is crazy, dead internet theory for real...
+   also someone wants to do it the "legit" way HAHA 
+   ![](Pasted%20image%2020260712181905.png)
    
-- parkour civilization 
-  ![](Pasted%20image%2020260711025900.png)![](Pasted%20image%2020260711025914.png)
+   - parkour civilization 
+   ![](Pasted%20image%2020260711025900.png)![](Pasted%20image%2020260711025914.png)
 
 4. Ok, lets get to the real deal of searching the flag :P
    
@@ -1186,6 +1190,7 @@ Got my money back, as advertised.
 ### [EASY] impossible stego
 
 Author: sy1vi3
+
 Tags: Stego
 
 **Description**
@@ -1867,7 +1872,7 @@ Our instancer serves connections with SSL TCP, use `tls_proxy.py` to start a loc
 3. Start screen mirroring with `scrcpy` 
    ![](Pasted%20image%2020260705063754.png)
 
-4. The challenge did mention on crafting an exploit, but its not really necessary when you have `scrcpy`, much more easier navigating thru the app UI. (unintended cheezed solution I guess lol)
+4. The challenge did mention on crafting an exploit, but its not really necessary as I did the **SQL injection** method of gaining **Privilige Escalation** from SQLi, much more easier navigating thru the app UI. (unintended cheezed solution I guess lol)
 
 5. Performed the installation of the 2 files 
    
@@ -1896,7 +1901,7 @@ adb -s 127.0.0.1:5555 shell am force-stop com.sekai.id
 
  9. Immediately went to `sekai-wallet.db` coz it has rw permissions. 
     ![](Pasted%20image%2020260705070422.png)
-From here, I tried checking out whats in .tables first, then saw credentials. I elevated the current crendentials from attendee to admin.
+From here, I tried checking out whats in .tables first, then saw credentials. I elevated the current `accessProfile` credentials from `attendee` to `admin`.
 
 10. We are now admin :D 
     

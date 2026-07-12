@@ -1,11 +1,14 @@
 Team Project Sekai
 by helyz
 
-This is a CTF hosted by the OWASP Kuala Lumpur Chapter.
-Week 5 - Labyrinth (Hardware, OS, ~~AI~~, Mobile)
+This is a CTF hosted by the **OWASP Kuala Lumpur Chapter**.
+
+Week 5 - **Labyrinth** (Hardware, OS, ~~AI~~, Mobile)
+
 Date: 19 - 21 June 2026
 
-**Flag Format:** `OWASPKL{...}`
+>> 🚩 **Flag Format:** `OWASPKL{...}`
+
 # ISC
 
 ## SCADA

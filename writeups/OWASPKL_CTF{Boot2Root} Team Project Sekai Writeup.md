@@ -1,6 +1,14 @@
 Team Project Sekai
 by helyz
 
+This is a CTF hosted by the **OWASP Kuala Lumpur Chapter**.
+
+Week 2 - **Boot2Root**
+
+Date: 29 - 31 May 2026
+
+>> 🚩 **Flag Format:** `OWASPKL{...}`
+
 ## [EASY] GGEZAF
 
 Its 2nd Week already, you can even predict your position isnt? Well then, prove you're not tryhard. This is dockerized challenge. Use target IP below. IP: 45.32.121.222 
