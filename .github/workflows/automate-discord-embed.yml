@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - 'posts.json'
-      - 'scripts/generate-share-pages.js'
+      - 'js/automate-discord-embed.js'
   workflow_dispatch: {}
 
 permissions:
@@ -21,19 +21,19 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 'lts/*'
 
-      - name: Generate /w/ pages from posts.json
+      - name: Generate posts/ pages from posts.json
         run: node js/automate-discord-embed.js
 
       - name: Commit generated pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add w/
+          git add posts/
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore(posts): regenerate embed links"
+            git commit -m "chore(posts): regenerate embed links [skip ci]"
             git push
           fi
