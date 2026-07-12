@@ -18,6 +18,11 @@ async function init() {
     const el = id => document.getElementById(id);
     if (el('stat-posts')) el('stat-posts').textContent = allPosts.length;
 
+    fetch('projects.json')
+      .then(r => r.json())
+      .then(projects => { if (el('stat-projects')) el('stat-projects').textContent = projects.length; })
+      .catch(() => {});
+
     const uniqTags = [...new Set(allPosts.flatMap(p => p.tags))];
     if (el('stat-tags')) el('stat-tags').textContent = uniqTags.length;
 
