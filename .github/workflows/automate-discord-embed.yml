@@ -24,7 +24,7 @@ jobs:
           node-version: '20'
 
       - name: Generate /w/ pages from posts.json
-        run: node scripts/automate-discord-embed.js
+        run: node js/automate-discord-embed.js
 
       - name: Commit generated pages
         run: |
