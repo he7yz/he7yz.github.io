@@ -31,6 +31,7 @@ const esc = s => String(s ?? '')
 
 for (const p of posts) {
   const slug = slugify(p.id);
+
   const url = `${SITE}/post.html?file=${encodeURIComponent(p.id)}`;
   const image = `${SITE}/${p.thumbnail}`;
   const desc = `${p.excerpt}${p.tags?.length ? `\n\nTags: ${p.tags.join(', ')}` : ''}`;
