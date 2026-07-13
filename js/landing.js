@@ -31,8 +31,8 @@ class ASCIIMorph {
     cvs.height = H * DPR;
     ctx.scale(DPR, DPR);
 
-    const fs = Math.min(W / this.text.length * 1.2, 136);
-    ctx.font          = `800 ${fs}px "JetBrains Mono", monospace`;
+    const fs = Math.min(W / this.text.length * 1.4, 166);
+    ctx.font          = `1000 ${fs}px "JetBrains Mono", monospace`;
     ctx.textBaseline  = 'middle';
     ctx.fillStyle     = '#fff';
     const tw = ctx.measureText(this.text).width;
