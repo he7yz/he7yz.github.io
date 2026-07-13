@@ -63,29 +63,29 @@ body {
 }
 
 /* top_bar */
-.topbar {
-  position:fixed; top:0; left:0; right:0; z-index:50;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:.7rem 2rem;
-  border-bottom:1px solid var(--border);
-  background:rgba(10,10,8,.88);
-  backdrop-filter:blur(10px);
-}
-.tb-brand { font-family: var(--font-pixel); font-size:.76rem; font-weight:700; color:var(--text-lo); letter-spacing:.04em; }
-.tb-brand .tld { color:var(--accent); }
-.tb-brand .nm  { color:var(--text); }
-.tb-right {
-  display:flex; align-items:center; gap:1.4rem;
-  font-size:.57rem; letter-spacing:.13em;
-  color:var(--text-lo); text-transform:uppercase;
-}
-.tb-sys { opacity:.55; }
-.tb-status { display:flex; align-items:center; gap:.36rem; color:var(--accent); }
-.sdot {
-  width:5px; height:5px; border-radius:50%; background:var(--accent);
-  animation:sdpulse 2.5s ease-in-out infinite;
-}
-@keyframes sdpulse { 0%,100%{opacity:1;} 50%{opacity:.15;} }
+/* .topbar { */
+/*   position:fixed; top:0; left:0; right:0; z-index:50; */
+/*   display:flex; align-items:center; justify-content:space-between; */
+/*   padding:.7rem 2rem; */
+/*   border-bottom:1px solid var(--border); */
+/*   background:rgba(10,10,8,.88); */
+/*   backdrop-filter:blur(10px); */
+/* } */
+/* .tb-brand { font-family: var(--font-pixel); font-size:.76rem; font-weight:700; color:var(--text-lo); letter-spacing:.04em; } */
+/* .tb-brand .tld { color:var(--accent); } */
+/* .tb-brand .nm  { color:var(--text); } */
+/* .tb-right { */
+/*   display:flex; align-items:center; gap:1.4rem; */
+/*   font-size:.57rem; letter-spacing:.13em; */
+/*   color:var(--text-lo); text-transform:uppercase; */
+/* } */
+/* .tb-sys { opacity:.55; } */
+/* .tb-status { display:flex; align-items:center; gap:.36rem; color:var(--accent); } */
+/* .sdot { */
+/*   width:5px; height:5px; border-radius:50%; background:var(--accent); */
+/*   animation:sdpulse 2.5s ease-in-out infinite; */
+/* } */
+/* @keyframes sdpulse { 0%,100%{opacity:1;} 50%{opacity:.15;} } */
 
 /* main_moon_bunker */
 main {
