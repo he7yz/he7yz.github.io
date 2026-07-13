@@ -31,6 +31,7 @@ html { font-size:17px; }
 a { text-decoration:none; color:inherit; }
 
 body {
+  overflow-x: hidden;
   font-family: var(--font);
   background: var(--bg);
   background-image: url('../assets/GhostInTheShell.jpg');
@@ -204,7 +205,7 @@ main {
 /* tagline */
 .tagline {
   font-family: var(--font-pixel);
-  font-size:.85rem; color:var(--text-lo);
+  font-size:.72rem; color:var(--text-lo);
   letter-spacing:.06em; line-height:1.85;
 }
 .tagline .sep { color:var(--border2); margin:0 .1rem; }
@@ -279,9 +280,12 @@ main {
 
 /* resnponsiveness */
 @media (max-width: 860px) {
-  main { flex-direction:column; gap:2.2rem; padding:4.5rem 1.8rem 3.5rem; align-items:flex-start; }
+  main { flex-direction:column; gap:2.2rem; padding:4.5rem 1.8rem 3.5rem; align-items:center; text-align:center; }
   .portrait-frame { width:190px; }
   #morph-wrap { width:min(420px, 90vw); }
+  .info-side { align-items: center; }
+  .divider, .cursor-line { align-self: flex-start; text-align: left;}
+  .tagline { font-size: .56rem; letter-spacing:.02em;}
   .ni-trl { display:none; }
   .p-scan-left, .p-scan-right { display:none; }
 }
@@ -289,5 +293,6 @@ main {
   .tb-sys { display:none; }
   .portrait-frame { width:150px; }
   main { gap:1.6rem; padding:4rem 1.2rem 3rem; }
-  #morph-wrap { width:90vw; }
+  #morph-wrap { width:90vw; margin:0 auto; }
+  .tagline {font-size: .48rem; letter-spacing:0; line-height:1.6; }
 }
