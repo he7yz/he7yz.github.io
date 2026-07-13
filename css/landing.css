@@ -152,7 +152,7 @@ main {
 /* kewl_barcode_scanner_line */
 .portrait-scan {
   position:absolute; left:0; right:0; height:2px;
-  background:linear-gradient(90deg, transparent, rgba(200,184,144,.35), transparent);
+  background:linear-gradient(90deg, transparent, rgba(107,102,198, .3), transparent);
   animation:pscan 4s linear infinite;
   pointer-events:none;
 }
