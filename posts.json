@@ -23,7 +23,7 @@
     "category": "CTF Writeup",
     "catClass": "c-ctf",
     "thumbnail": "assets/thumbnails/OWASPKL_LIGA_CTF_2026.png",
-    "tags": ["CTF", "Digital Forensics (DFir)", "Windows","Cookie Tampering","Industrial Control Systems (ICS)", "Supervisory Control And Data Acquisition (SCADA)", "Operational Technology (OT)"],
+    "tags": ["CTF", "Digital Forensics & Incident Response (DFIR)", "Windows","Cookie Tampering","Industrial Control Systems (ICS)", "Supervisory Control And Data Acquisition (SCADA)", "Operational Technology (OT)"],
     "excerpt": "Team Project Sekai by helyz, hosted by OWASP Kuala Lumpur Chapter (Week 5)",
     "challenge": {
       "name": "PLUS - I, PLUS - II, Local, History, Run, Pipe, Fire, Mailware",

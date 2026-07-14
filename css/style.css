@@ -251,7 +251,7 @@ body {
   display:flex; align-items:center; gap:.52rem;
   padding: .42rem 1.25rem;
   font-family: var(--font-mc);
-  font-size: .72rem; font-weight:normal;
+  font-size: .77rem; font-weight:normal;
   letter-spacing: 0; text-transform:none;
   color:var(--text-lo);
   transition:all .13s;
