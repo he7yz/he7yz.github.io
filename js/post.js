@@ -61,7 +61,7 @@ async function loadPost() {
     if (statPosts) statPosts.textContent = posts.length;
     if (statTags) statTags.textContent = allTags.length;
 
-    document.title = `${meta ? meta.title : id} — ~/λ`;
+    document.title = `~/λz/Posts/${meta ? meta.title : id}`;
 
   } catch(e) {
     showErr(`Failed to load writeup: <code>${e.message}</code>`);

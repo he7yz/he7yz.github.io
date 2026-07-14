@@ -165,7 +165,7 @@ main {
 
 .portrait-sub {
   font-family: var(--font-pixel);
-  font-size:.65rem; color:var(--text-lo);
+  font-size:.70rem; color:var(--text-lo);
   letter-spacing:.14em; text-transform:uppercase;
   text-align:center;
 }
@@ -236,16 +236,17 @@ main {
 .nav-item:hover .ni-num { color:var(--accent); }
 .nav-item:hover .ni-trl { background:var(--accent); opacity:.3; }
 
-.ni-br  { font-size:.68rem; color:var(--border2); transition:color .18s; flex-shrink:0; }
+.ni-br  { font-family: var(--font-pixel); font-size:.78rem; color:var(--border2); transition:color .18s; flex-shrink:0; }
 .ni-num {
-  font-size:.6rem; font-weight:700;
+  font-family: var(--font-pixel);
+  font-size:.69rem; font-weight:700;
   color:var(--text-lo); letter-spacing:.1em;
   transition:color .18s; min-width:1.2em; flex-shrink:0;
 }
 .ni-lbl { font-size:.7rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; flex:1; }
 .ni-trl { flex:1; height:1px; background:var(--border); max-width:90px; transition:all .18s; }
 
-.cursor-line { display:flex; align-items:center; gap:.36rem; font-size:.7rem; color:var(--text-lo); }
+.cursor-line { display:flex; align-items:center; gap:.36rem; font-family: var(--font-pi);font-size:.7rem; color:var(--text-lo); }
 .cl-prompt { color:var(--accent); }
 .cl-cursor {
   display:inline-block; width:7px; height:13px;
