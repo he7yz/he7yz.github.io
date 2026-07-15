@@ -1,5 +1,37 @@
 [
   {
+    "id": "hikaue_head_chibi",
+    "image": "assets/comms/vii_chibi_by_mimm1n.png",
+    "title": "Zero",
+    "artist": "@mimm1n on VGen",
+    "description": "After 6 years later, he is now wearing glasses.",
+    "date": "June 22th, 2026"
+  },
+  {
+    "id": "Zero",
+    "image": "assets/comms/zero_by_mimm1n.png",
+    "title": "Zero",
+    "artist": "@mimm1n on VGen",
+    "description": "You're beautiful as the day i've lost you.",
+    "date": "June 11th, 2026"
+  },
+  {
+    "id": "2b9s_chibi",
+    "image": "assets/comms/2B9S_chibi_by_mimm1n.png",
+    "title": "2B & 9S Chibi",
+    "artist": "@mimm1n on VGen",
+    "description": "Breaking free from YoRHA, they uncover the truth about their existence, and start to express their true emotions.",
+    "date": "May 12th, 2026"
+  },
+  {
+    "id": "2b9s_blindfolded_chibi",
+    "image": "assets/comms/2B9S_Blindfold_chibi_by_mimm1n.png",
+    "title": "2B & 9S Blindfolded Chibi",
+    "artist": "@mimm1n on VGen",
+    "description": "2B is a Battler-Type Android, while 9S is a Scanner-Type Android serving the YoRHA Elite Military Force.",
+    "date": "May 12th, 2026"
+  },
+  {
     "id": "lyza",
     "image": "assets/pfps/helyz2026.png",
     "title": "Lyza",
@@ -8,27 +40,35 @@
     "date": "March 29th, 2026"
   },
   {
+    "id": "mmucraft",
+    "image": "assets/comms/mmucraftv2_by_muning.png",
+    "title": "MMUCraft Banner",
+    "artist": "@mimingmuning on Discord",
+    "description": "The beginning after an end.",
+    "date": "December 12th, 2025"
+  },
+  {
     "id": "lyza_fullbody_y2k",
     "image": "assets/comms/lyza_fullbody_by_deedad.png",
     "title": "Lyza Y2k",
-    "artist": "Deedad",
+    "artist": "@Deedad",
     "description": "Lyza Y2K fit with my friends' artstyle C:",
-    "date": "July 10rd, 2024"
+    "date": "July 10th, 2024"
   },
   {
-    "id": "vii_chibi",
+    "id": "hikaue_chibi",
     "image": "assets/comms/vii_chibi_by_bm59.png",
-    "title": "VII Chibi",
-    "artist": "BM59",
-    "description": "A chibi of my Roblox OC",
+    "title": "Hikaue Chibi",
+    "artist": "@BM59",
+    "description": "A chibi of my Roblox OC!",
     "date": "July 3rd, 2020"
   },
   {
-    "id": "vii_headshot",
+    "id": "hikaue_headshot",
     "image": "assets/comms/vii_headshot_by_bm59.png",
-    "title": "VII Headshot",
-    "artist": "BM59",
-    "description": "My first ever commissioned art, a Roblox OC, for FREE ToT",
+    "title": "Hikaue Headshot",
+    "artist": "@BM59",
+    "description": "My first ever commissioned art, from my Roblox OC, for FREE ToT. I met the artist on a Roblox Art Server called FreeDraw, because back then I used to draw digitally on that game. Oh how time flies...",
     "date": "July 3rd, 2020"
   }
 

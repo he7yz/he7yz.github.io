@@ -247,7 +247,7 @@ main {
 .ni-trl { flex:1; height:1px; background:var(--border); max-width:90px; transition:all .18s; }
 
 .cursor-line { display:flex; align-items:center; gap:.36rem; font-family: var(--font-pi);font-size:.7rem; color:var(--text-lo); }
-.cl-prompt { color:var(--accent); }
+.cl-prompt { font-family: var(--font-pixel); color:var(--accent); }
 .cl-cursor {
   display:inline-block; width:7px; height:13px;
   background:var(--accent); border-radius:1px; opacity:.85;
