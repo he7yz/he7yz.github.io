@@ -1,0 +1,114 @@
+/* horizontal_timeline */
+
+.timeline-wrap { position: relative; }
+.timeline-rail {
+  display: flex; gap: 0; overflow-x: auto; overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  align-items: center;
+  padding: 1rem 0 2.4rem;
+  scrollbar-width: thin;
+  min-height: 64vh;
+}
+.timeline-rail::-webkit-scrollbar { height: 4px; }
+.timeline-rail::-webkit-scrollbar-thumb { background: var(--border2); }
+
+.t-node {
+  flex: 0 0 min(300px, 300px);
+  scroll-snap-align: center;
+  position: relative;
+  padding: 0 2rem;
+  display: flex; flex-direction: column;
+  height: 1000px;
+  width: 300px;
+}
+.t-node::before {
+  content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1px;
+  background: var(--border2); z-index: 0;
+}
+.t-dot {
+  width: 13px; height: 13px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--accent);
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+  z-index: 1; transition: background .2s;
+}
+.t-node.active .t-dot { background: var(--accent); box-shadow: 0 0 10px var(--accent-dim); }
+
+.t-slot { display: flex; flex: 1; min-height: 0; overflow: visible; }
+.t-slot-top    { align-items: flex-end;   padding-bottom: 1.4rem; }
+.t-slot-bottom { align-items: flex-start; padding-top: 1.4rem; }
+
+.t-node-label {
+  text-align: center; font-size: .64rem; color: var(--text-lo);
+  letter-spacing: .1em; text-transform: uppercase; width: 100%;
+  margin-top: .9rem;
+}
+
+
+.t-card { border: 1px solid var(--border2); background: var(--surface); overflow: hidden; opacity: .5; transition: opacity .2s; }
+.t-node.active .t-card { opacity: 1; border-color: var(--a-border); }
+.t-cover { width: min(100%, 300px); aspect-ratio: 1/1; object-fit: cover; display: block; filter: saturate(.7); }
+.t-body {
+  padding: 1.6rem 1.8rem;
+  position: relative;
+  background-size: cover; background-position: center;
+  isolation: isolate;
+}
+.t-body::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(9,9,11,.82), rgba(9,9,11,.92));
+  z-index: -1;
+}
+.t-title { font-family: var(--font-mc); font-size: 1rem; font-weight: 700; color: var(--text-hi); margin-bottom: .3rem; }
+.t-meta  { font-family: var(--font-mc); font-size: .66rem; color: var(--text-lo); margin-bottom: .7rem; }
+.t-desc  { font-size: .74rem; color: var(--text); line-height: 1.65; margin-bottom: .9rem; }
+
+.t-platforms { display: flex; gap: .5rem; }
+.t-plat-btn {
+  flex: 1; height: 34px; display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border2); background: none; color: var(--text-lo); transition: all .15s;
+  cursor: pointer; padding: 0;
+}
+
+.t-plat-btn:hover { color: var(--accent); border-color: var(--a-border); background: var(--a-bg); }
+.t-plat-btn.active { color: var(--accent); border-color: var(--accent); background: var(--a-bg); }
+.t-plat-btn svg { width: 18px; height: 18px; fill: currentColor; pointer-events: none; }
+.t-embed-slot:not(:empty) { margin-top: 1rem; }
+.t-embed-slot iframe { display: block; height: 152px; }
+
+.timeline-hint {
+  font-family: var(--font-mc);
+  text-align: center; font-size: .6rem; color: var(--text-lo);
+  letter-spacing: .1em; text-transform: uppercase; margin-top: -1.2rem; margin-bottom: 1rem;
+}
+.timeline-hint span { color: var(--accent); }
+
+/* mobile_portrait_mode */
+@media (max-width: 600px) and (orientation: portrait) {
+  .timeline-hint { display: none; }
+  .timeline-rail {
+    display: flex; flex-direction: column;
+    overflow-x: visible; overflow-y: visible;
+    scroll-snap-type: none;
+    min-height: 0;
+    align-items: stretch;
+    padding: .5rem 0;
+    gap: 2rem;
+  }
+  .t-node {
+    flex: none; height: auto;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    padding: 0;
+  }
+  .t-node::before {
+    left: 9px; right: auto; top: 0; bottom: 0; width: 1px; height: auto;
+    background: var(--border2);
+  }
+  .t-dot { left: 9px; top: 24px; transform: translate(-50%, -50%); }
+  .t-slot { flex: none; display: block; }
+  .t-slot-top, .t-slot-bottom { grid-column: 2; padding: 0 0 .6rem 1rem; }
+  .t-node-label  { text-align: left; }
+}
+.main-content { display: flex; flex-direction: column; }
+.timeline-wrap { flex: 1; display: flex; flex-direction: column; }
+.timeline-rail { flex: 1; }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<!-- hello there lurker, there is nothing to see here ;-;-->
+
+<link rel="icon" type="image/png" href="assets/pfps/helyz2026.png">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Music by helyz.">
+  <title>~/λz/Discography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/discography.css">
+</head>
+<body>
+
+<div class="overlay" id="overlay" onclick="closeSB()"></div>
+
+<div class="topbar">
+  <a href="index.html" class="tb-brand"><span class="tilde">~/</span>λz</a>
+      <button class="tb-btn" onclick="toggleSB()">{MENU}</button>
+</div>
+
+<div class="site">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="index.html" class="sb-brand">
+      <span class="tilde">~/</span><span class="handle">λz</span>
+    </a>
+
+    <div class="sb-profile">
+      <div class="av-wrap">
+        <div class="av-ring"></div>
+        <div class="av-inner"><img src="assets/pfps/helyz2026.png" alt=""></div>
+      </div>
+      <div class="sb-name">helyz</div>
+      <div class="sb-role">pwnzor :3</div>
+      <div class="sb-bio">Offensive Security<br> Lost in the Cyberspace. </div>
+    </div>
+
+    <nav class="sb-nav">
+      <a href="blog.html"       class="nav-link"><span class="ni">▸</span> ./Home</a>
+      <a href="categories.html" class="nav-link"><span class="ni">▸</span> ./Categories</a>
+      <a href="projects.html"   class="nav-link"><span class="ni">▸</span> ./Projects</a>
+      <a href="discography.html" class="nav-link active"><span class="ni">▸</span> ./Discography</a>
+      <a href="art-gallery.html"       class="nav-link"><span class="ni">▸</span> ./Art_Gallery</a>
+      <a href="about.html"      class="nav-link"><span class="ni">▸</span> ./About</a>
+    </nav>
+
+    <div class="sb-term">
+      <div><span class="t-prompt">$</span> <span class="t-cmd">play --helyz --singles</span></div>
+      <div class="t-out">loading tracks...</div>
+      <div class="t-out">starting FL Studio...</div>
+      <div class="t-out">[ GENRES ] OST/DnB/LoFi/EDM=scanned!</div>
+      <div class="t-out">[ NOTICE ] These musics are NOT AI generated. It's even before the birth of them.</div>
+      <div class="t-out">[ WARN ]shitty css skills inbound...</div>
+      <div><span class="t-prompt">$</span> <span class="t-cursor"></span></div>
+    </div>
+    <div class="sb-lanyard">
+      <a href="https://discord.com/users/262273129840115713" target="_blank" rel="noopener">
+        <img src="https://lanyard.kyrie25.dev/api/262273129840115713?animatedDecoration=true&hideNameplate=false&showDisplayName=false&theme=dark&waveColor=800080.&clanbg=800080." alt="Discord Status" />
+      </a>
+    </div>
+  </aside>
+
+  <div class="main-wrap">
+    <main class="main">
+      <div class="main-grid">
+        <div class="main-content" style="grid-column:1/-1;">
+          <div class="sec-hd" id="sec-hd">𝄞 discography</div>
+          <div class="timeline-wrap">
+            <div class="timeline-rail" id="timeline-rail">
+              <p style="color:var(--text-lo);font-size:.74rem;padding:0 1.5rem;">loading tracks...</p>
+            </div>
+          </div>
+          <div class="timeline-hint"> <<< <span>recent</span> &nbsp;ᗧ · · · ᗣ · · · ᗣ · · · ᗣ · · · ᗣ · · · • · · · &nbsp; <span>oldest</span> >>> </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div>© 2026 <span class="ft-accent">helyz</span>. Certain rights reserved.</div>
+      <div class="ft-links">
+        <a href="https://github.com/he7yz" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://twitter.com/helyz_"  target="_blank" rel="noopener">Twitter</a>
+        <a href="#">RSS</a>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<script src="js/main.js" defer></script>
+<script src="js/discography.js" defer></script>
+</body>
+</html>
