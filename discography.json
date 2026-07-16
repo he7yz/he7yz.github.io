@@ -1,0 +1,122 @@
+[
+  {
+    "id": "yearn",
+    "title": "Yearn",
+    "cover": "https://m.media-amazon.com/images/I/41n4l7DY5SL._UXNaN_FMjpg_QL85_.jpg",
+    "infoBg": "https://img.magnific.com/free-vector/stylish-square-random-size-halftone-pattern-background_1409-1844.jpg?semt=ais_hybrid&w=740&q=80",
+    "genre": "Orchestral Soundtrack",
+    "date": "July 7th, 2024",
+    "description": "my apology to the world.",
+    "links": [
+      {
+        "platform": "spotify",
+        "url": "https://open.spotify.com/track/7682WLG3JlakLoeXPlhv2S?si=aa1dee5f92064d56",
+        "embed": "https://open.spotify.com/embed/track/7682WLG3JlakLoeXPlhv2S?si=aa1dee5f92064d56"
+      },
+      {
+        "platform": "ytmusic",
+        "url": "https://music.youtube.com/watch?v=tBi56Hv3BLQ",
+        "embed": "https://www.youtube.com/embed/tBi56Hv3BLQ"
+      }
+    ]
+  },
+  {
+    "id": "error",
+    "title": "ZXJyb3I=",
+    "cover": "https://i1.sndcdn.com/artworks-P4rKVMDkLahBABe8-Zs8QAw-t500x500.jpg",
+    "infoBg": "https://img.magnific.com/free-vector/stylish-square-random-size-halftone-pattern-background_1409-1844.jpg?semt=ais_hybrid&w=740&q=80",
+    "genre": "DnB / Breakcore",
+    "date": "May 5th, 2024",
+    "description": "error.",
+    "links": [
+      {
+        "platform": "soundcloud",
+        "url": "https://soundcloud.com/he7yz/error",
+        "embed": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fhe7yz%2Ferror&color=%236b66c6&auto_play=false&show_teaser=false"
+      },
+      {
+        "platform": "ytmusic",
+        "url": "https://music.youtube.com/watch?v=EIevu6cT1WA",
+        "embed": "https://www.youtube.com/embed/EIevu6cT1WA"
+      }
+    ]
+  },
+  {
+    "id": "exaltation",
+    "title": "Exaltation",
+    "cover": "https://i1.sndcdn.com/artworks-Jhv9z44enqi5RvtQ-sEEPEA-t500x500.jpg",
+    "infoBg": "https://img.magnific.com/free-vector/stylish-square-random-size-halftone-pattern-background_1409-1844.jpg?semt=ais_hybrid&w=740&q=80",
+    "genre": "LoFi / Violin",
+    "date": "April 27th, 2024",
+    "description": "lofi with my fav instrument :3",
+    "links": [
+      {
+        "platform": "spotify",
+        "url": "https://open.spotify.com/track/3u25HcTVPwPpz13TK0PpzU?si=29206a3c130a4ef1",
+        "embed": "https://open.spotify.com/embed/track/3u25HcTVPwPpz13TK0PpzU?si=29206a3c130a4ef1"
+      },
+      {
+        "platform": "soundcloud",
+        "url": "https://soundcloud.com/he7yz/exaltation",
+        "embed": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fhe7yz%2Fexaltation&color=%236b66c6&auto_play=false&show_teaser=false"
+      },
+      {
+        "platform": "ytmusic",
+        "url": "https://music.youtube.com/watch?v=mk-FxScI24A",
+        "embed": "https://www.youtube.com/embed/mk-FxScI24A"
+      }
+    ]
+  },
+  {
+    "id": "zenith",
+    "title": "Zenith",
+    "cover": "https://i1.sndcdn.com/artworks-zvZPqBcPu9FhbbTy-gEHzVw-t500x500.jpg",
+    "infoBg": "https://img.magnific.com/free-vector/stylish-square-random-size-halftone-pattern-background_1409-1844.jpg?semt=ais_hybrid&w=740&q=80",
+    "genre": "Synthwave / DnB",
+    "date": "October 31th, 2023",
+    "description": "welcome to the outer cyberspace.",
+    "links": [
+      {
+        "platform": "spotify",
+        "url": "https://open.spotify.com/track/4hxFMDlkr8VXsu69Lwpf4G?si=56e204b724bd4825",
+        "embed": "https://open.spotify.com/embed/track/4hxFMDlkr8VXsu69Lwpf4G?si=56e204b724bd4825"
+      },
+      {
+        "platform": "soundcloud",
+        "url": "https://soundcloud.com/he7yz/zenith",
+        "embed": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fhe7yz%2Fzenith&color=%236b66c6&auto_play=false&show_teaser=false"
+      },
+      {
+        "platform": "ytmusic",
+        "url": "https://music.youtube.com/watch?v=w8jkjs5ORiQ",
+        "embed": "https://www.youtube.com/embed/w8jkjs5ORiQ"
+      }
+    ]
+  },
+  {
+    "id": "hakone",
+    "title": "Hakone",
+    "cover": "https://i1.sndcdn.com/artworks-5VbjaDKAxvzt6JbC-l5pZlA-t500x500.jpg",
+    "infoBg": "https://img.magnific.com/free-vector/stylish-square-random-size-halftone-pattern-background_1409-1844.jpg?semt=ais_hybrid&w=740&q=80",
+    "genre": "Phonk",
+    "date": "August 20th, 2023",
+    "description": "Hakone Turnpike, Japan + Mazda RX7 = (˶ˆᗜˆ˵)",
+    "links": [
+      {
+        "platform": "spotify",
+        "url": "https://open.spotify.com/track/4hxFMDlkr8VXsu69Lwpf4G?si=56e204b724bd4825",
+        "embed": "https://open.spotify.com/embed/track/4hxFMDlkr8VXsu69Lwpf4G?si=56e204b724bd4825"
+      },
+      {
+        "platform": "soundcloud",
+        "url": "https://soundcloud.com/he7yz/hakone-drift",
+        "embed": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fhe7yz%2Fhakone-drift&color=%236b66c6&auto_play=false&show_teaser=false"
+      },
+      {
+        "platform": "ytmusic",
+        "url": "https://music.youtube.com/watch?v=p8wPTTcR274",
+        "embed": "https://www.youtube.com/embed/p8wPTTcR274"
+      }
+    ]
+  }
+]
