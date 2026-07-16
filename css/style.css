@@ -272,7 +272,7 @@ body {
   font-size:.62rem; line-height:1.95;
   flex-shrink:0;
 }
-.t-prompt { color:var(--accent); user-select:none; }
+.t-prompt { color:var(--accent); user-select:none; font-family: var(--font-mc); }
 .t-cmd    { color:var(--text); }
 .t-out    { color:var(--text-lo); padding-left:.45rem; }
 .t-cursor {
@@ -827,7 +827,6 @@ body {
   border: 1px solid var(--border2);
   color: var(--text-lo);
   padding: .22rem .65rem;
-  border-radius: 3px;
   font-size: .62rem;
   font-family: var(--font);
   letter-spacing: .06em;
@@ -853,7 +852,6 @@ body {
 
 .proj-card {
   border:1px solid var(--border2);
-  border-radius:var(--r);
   background:var(--surface);
   padding:1.05rem;
   display:flex; flex-direction:column; gap:.52rem;
