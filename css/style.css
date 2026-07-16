@@ -875,14 +875,14 @@ body {
 .proj-tech  {
   font-size:.57rem; padding:.08em .42em;
   border:1px solid var(--border2);
-  border-radius:2px; color:var(--text-lo);
+  color:var(--text-lo);
 }
 .proj-links { display:flex; gap:.45rem; padding-top:.3rem; flex-wrap:wrap; }
 .proj-link {
   font-size:.61rem; font-weight:600;
   color:var(--text-lo);
   border:1px solid var(--border2);
-  padding:.18em .58em; border-radius:2px;
+  padding:.18em .58em;
   transition:all .13s; letter-spacing:.04em;
 }
 .proj-link:hover { color:var(--accent); border-color:var(--a-border); background:var(--a-bg); }
@@ -891,14 +891,14 @@ body {
 .proj-status {
   font-size:.54rem; font-weight:700;
   letter-spacing:.1em; text-transform:uppercase;
-  padding:.1em .48em; border-radius:2px;
+  padding:.1em .48em;
   display:inline-flex; align-items:center; gap:.28rem;
   flex-shrink:0;
 }
 .proj-status.wip  { color:var(--c-ctf);  border:1px solid rgba(251,146,60,.25);  background:rgba(251,146,60,.06); }
 .proj-status.done { color:var(--accent); border:1px solid var(--a-border);        background:var(--a-bg); }
 .ps-dot {
-  width:4px; height:4px; border-radius:50%;
+  width:4px; height:4px;
   background:currentColor;
   animation:rbpulse 1.5s ease-in-out infinite;
 }
