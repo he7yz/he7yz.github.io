@@ -40,6 +40,14 @@
     "date": "March 29th, 2026"
   },
   {
+    "id": "alice",
+    "image": "assets/comms/alice_by_muning.png",
+    "title": "Alice Selfie!",
+    "artist": "@mimingmuning on Discord",
+    "description": "NIHAOOOO hiiii!!!! :D",
+    "date": "December 12th, 2025"
+  },
+  {
     "id": "mmucraft",
     "image": "assets/comms/mmucraftv2_by_muning.png",
     "title": "MMUCraft Banner",
