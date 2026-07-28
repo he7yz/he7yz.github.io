@@ -32,6 +32,14 @@
     "date": "May 12th, 2026"
   },
   {
+    "id": "alice_and_bobby",
+    "image": "assets/comms/alice_and_bobby_by_muning.png",
+    "title": "Silly Alice",
+    "artist": "@mimingmuning on Discord",
+    "description": "she'll b nice, trust",
+    "date": "April 27th, 2026"
+  },
+  {
     "id": "lyza",
     "image": "assets/pfps/helyz2026.png",
     "title": "Lyza",
