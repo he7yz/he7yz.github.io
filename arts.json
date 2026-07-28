@@ -2,7 +2,7 @@
   {
     "id": "hikaue_head_chibi",
     "image": "assets/comms/vii_chibi_by_mimm1n.png",
-    "title": "Zero",
+    "title": "Hikaue Head Chibi",
     "artist": "@mimm1n on VGen",
     "description": "After 6 years later, he is now wearing glasses.",
     "date": "June 22th, 2026"
@@ -30,6 +30,14 @@
     "artist": "@mimm1n on VGen",
     "description": "2B is a Battler-Type Android capable of all-rounder combat, while 9S is a Scanner-Type Android with high-end hacking skills, serving the YoRHA Elite Military Force. 2B is the oh-not-so-sweet type of person, while 9S is the polar opposite. Their sole goal is to restore Earth from the damned Machine Lifeforms for the sake of humanity, sent by the Moon. Though coming from a strict Organization, things started to change as time flies by...",
     "date": "May 12th, 2026"
+  },
+  {
+    "id": "alice_and_bobby_2",
+    "image": "assets/comms/alice_and_bobby_2_by_muning.png",
+    "title": "Silly Alice 2",
+    "artist": "@mimingmuning on Discord",
+    "description": "SMUG",
+    "date": "April 27th, 2026"
   },
   {
     "id": "alice_and_bobby",
