@@ -1,5 +1,18 @@
 [
   {
+    "id": "AniMe-Matrix-Audio-Visualyzer",
+    "name": "AMAV - AniMe Matrix Audio Visualyzer",
+    "description": "A real-time audio visualizer using cava for the ROG Zephyrus G14's AniMe Matrix Display.",
+    "stack": ["Modding","Rust", "cava", "ASUS", "Zephyrus G14"],
+    "status": "wip",
+    "date": "2026",
+    "image": "assets/projects/AMAV.png",
+    "github": null,
+    "demo": null,
+    "post": null,
+    "writeup": null
+  },
+  {
     "id": "alice",
     "name": "Alice",
     "description": "MMUCraft's beloved mascot, your friendly AI Multipurpose Discord Bot <3",
